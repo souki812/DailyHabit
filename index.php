@@ -1,4 +1,3 @@
-<?php
+<?
 
-
-require('views/signup/php');
+require('views/signup.php');
