@@ -1,0 +1,13 @@
+use cs332;
+
+drop table if exists users;
+
+create table users (
+	username VARCHAR(16) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    gender VARCHAR(6) NOT NULL,
+	user_id INT AUTO_INCREMENT PRIMARY KEY
+);
+
+alter table users add UNIQUE KEY(username);

@@ -45,6 +45,10 @@
                             <label>Password</label>
                             <input type="password" name="password" class="form-control">
                         </div>
+                         <div class="form-group">
+                            <label>Age</label>
+                            <input type="text" name="age" class="form-control">
+                        </div>
                         <input type="hidden" name="task" value="register">
                         <button type="submit" class="btn btn-default">Sign-up</button>
                     </form>
