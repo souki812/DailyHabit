@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <style>
+            .navbar-brand{
+                font-size:2em;
+                
+            }
+        </style>
     </head>
     <body>
         
@@ -27,37 +33,19 @@
                      <li><a href="#about">About</a></li>
                       <li><a href="#=testimonial">Testimonial</a></li>
                 </ul>
+                
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" class="form-control">   
+                    </div>
+                     <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">   
+                    </div>
+                     <button type="submit" class="btn btn-success">Log In</button>
+                </form>
             </div>
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-3">
-                  <h1 class="text-left">DailyHabit</h1>    
-                </div>
-                    
-                    <div  class="col-xs-3 col-sm-push-4">
-                       <input type="text" name="username" class="form-control" value="username">   
-                    </div>
-                    <div  class="col-xs-3 col-sm-push-4">
-                    <input type="password" name="password" class="form-control" value="Password">
-                    </div>
-                     <div  class="col-xs-3 col-sm-push-4">
-                    <button type="submit" class="btn btn-default">Log-in</button>
-                     </div>
-            </div>
+
      <!-- login.php  -->       
             
             
