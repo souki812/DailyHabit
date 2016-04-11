@@ -76,16 +76,17 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#home">Home</a></li> <!--active makes it default page-->
                      <li><a href="#about">About</a></li>
-                      <li><a href="#=testimonial">Testimonial</a></li>
+                      <li><a href="#testimonial">Testimonial</a></li>
                 </ul>
                 
-                <form class="navbar-form navbar-right">
+                <form action="authenticate.php" method="post" class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="email" placeholder="Email" class="form-control">   
+                        <input  placeholder="Email" name="username" class="form-control">   <!--type="email"-->
                     </div>
                      <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">   
+                        <input type="password" placeholder="Password" name="password" class="form-control">   
                     </div>
+                     <input type="hidden" name="task" value="login">
                      <button type="submit" class="btn btn-success">Log In</button>
                 </form>
             </div>
@@ -115,16 +116,19 @@
                             <input type="password" name="password" class="form-control">
                         </div>
                         <input type="hidden" name="task" value="register">
-                        <button type="submit" name="submit" class="btn btn-default">Register</button>
-
-        </div>
-
-
-
-         
+                        <button type="submit" class="btn btn-default">Register</button>
+        </div> 
         </div> 
     </div>
   </div>
+
+
+  <?php if(isset($_SESSION['message'])): ?>
+            <div class="row">
+                <p class="text-info text-center"><?php echo $_SESSION['message']; unset($_SESSION['message']);?></p> <!--when you click login without fillin out boxes -->
+                </div>
+<?php endif; ?>
+            </div>
   
   <div class="container PageContainer" id="secondcontainer">
     
