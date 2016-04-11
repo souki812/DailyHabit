@@ -13,7 +13,7 @@
             
             
             #firstContainer{
-                 background: url("goals.jpg");
+                 background: url("views/images/goals.jpg");
                  width: 100%;
                  background-size: cover;
                  height: 200px;
@@ -92,18 +92,35 @@
         </div>
 
   <div class="container PageContainer" id="firstContainer">
-    <img src="goals.jpg" />
-    <div class="row">
-       <div class="col-md-6 col-md-offset-3"  id="firstRow"> <!-- noves 3 colums to the right -->
-        <h1>Track your habits</h1>
+  <!--  <img src="views/images/goals.jpg" />-->
+        <div class="col-md-6 margintop1">
+                   <h1>Track your habits</h1>
         <p class="lead">Achieve all your goals with DailyHait</p>  <!--Bootstrap to make paragraph more distinct-->
         
         <p> Sign-up for free today!</p>
         <p> Keep track of your progress in an easy and fast way</p>
         <p> Quickly add and log your daily progress</p>
+
+        </div>
         
-         <p class="lead" class="large">Sign Up Today!</p>
-         <form></form>
+        <div class="col-md-6 margintop1">
+            <h3>Sign Up Today!</h3>
+                    <form action="authenticate.php" method="post" class="well">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" name="username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <input type="hidden" name="task" value="register">
+                        <button type="submit" name="submit" class="btn btn-default">Register</button>
+
+        </div>
+
+
+
          
         </div> 
     </div>
