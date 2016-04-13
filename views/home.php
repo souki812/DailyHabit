@@ -53,7 +53,7 @@
     <form>
         <div class="form-group">
             <label>NewsFeed</label>
-        <input type="text" class="form-control" value="What's on your mind?"/>
+        <input type="text" class="form-control" value="What's on your mind?"  id="textarea"/>
         </div>
     </form>
 </div>
