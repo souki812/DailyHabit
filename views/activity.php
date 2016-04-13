@@ -52,8 +52,17 @@
         
     </div>
     <div class="text-right"><br><br>
-    <button type="submit" class = "btn btn-warning btn-lg" >Edit Profile</button>
-    <button type="submit" class = "btn btn-warning btn-lg" >Edit Photo</button>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+     
+     Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+    
+    
+   <!-- <button type="submit" class = "btn btn-warning btn-lg" >Edit Profile</button>
+    <button type="submit" class = "btn btn-warning btn-lg" >Edit Photo</button> -->
+        
+    </form>
 </div> 
 </div>
  
