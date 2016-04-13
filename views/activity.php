@@ -20,33 +20,17 @@
 </style>
  
 
-<!-- CONTAINERS -->
-<<<<<<< HEAD
 <div class="container" id="firstContainer">
  
-=======
-<!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
-<div class="container" id="firstContainer">
- 
-<!-- page-header adds space aroundtext and enlarges it. It also adds an underline at the end -->
->>>>>>> origin/master
+
 <div class="page-header">
 <h1>Daily Habit App</h1>
 </div><br><br>
  
-<<<<<<< HEAD
-
-=======
-<!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
->>>>>>> origin/master
+ 
 <div class="jumbotron">
 
 <p>Your Profile</p>
- 
-<<<<<<< HEAD
-=======
- 
->>>>>>> origin/master
  <div class="container-fluid">
     <div class="row">
         <!--left container-->
@@ -73,22 +57,11 @@
 </div> 
 </div>
  
-
-<<<<<<< HEAD
-=======
  
-<!-- bootstraptut2.html -->
- 
-
->>>>>>> origin/master
 </div>
 </div>
 
 <!-- input -->
-<<<<<<< HEAD
-=======
-<!-- Bootstrap has hundreds of free icons. http://getbootstrap.com/components/#glyphicons They can be used on their own or inside of buttons with a link or regular button for example. -->
->>>>>>> origin/master
  <div class="container">
   <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -123,18 +96,9 @@
   </div>
   </div> 
  
-
-<<<<<<< HEAD
-<div class="container">
-<!-- delete account -->
-=======
-
- 
-<!-- Collapsible Navigation Bar -->
 <div class="container">
     
-<!-- Add any html elements in list -->
->>>>>>> origin/master
+<!-- delete account -->
 <a href="#" class="list-group-item">
   <h4 class="list-group-item-heading">Delete Account</h4>
   <p class="list-group-item-text">The account will be permanently deleted</p>
