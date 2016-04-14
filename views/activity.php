@@ -48,10 +48,13 @@
 
         <!--right container-->
         <div class="col-lg-6">
-            <p>Name</p><br>
-            <p>Age</p><br>
-            <p>Gender</p>
+            <?php foreach ($selection as $row): ?>
+            <p>Username:   <?php echo htmlentities($row['username'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p>Gender:  <?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p>Age:  <?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></p>
+            <?php endforeach; ?>
         </div>
+
         
     </div>
     <div class="text-right"><br><br>

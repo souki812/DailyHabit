@@ -4,20 +4,29 @@
 class User {
     
     private $db; // PDO connection
-    private $username, $password; // Credentials offered
+    private $username, $password, $gender, $age, $id; // Credentials offered
     
-    function __construct($db, $username, $password) {
+    function __construct($db, $username, $password,$gender, $age ) {
         $this->db = $db;
         $this->username = $username;
         $this->password = $password;
+         $this->gender = $gender;
+          $this->age = $age;
     }
+    
+   /** function select($id){
+		return $this->db->query("select username,gender,age from users where user_id=$id");
+	} **/
     
     // Attempt to add this user and return whether it worked
     function register() {
         $hash = password_hash($this->password, PASSWORD_DEFAULT);
-        $insert = $this->db->prepare('insert into users(username,password) values(:username,:password)');
+        $insert = $this->db->prepare('insert into users(username,password,gender,age) values(:username,:password,:gender,:age)');
         $insert->bindParam(':username', $this->username, PDO::PARAM_STR);
         $insert->bindParam(':password', $hash, PDO::PARAM_STR);
+        $insert->bindParam(':gender', $this->gender, PDO::PARAM_STR);
+        $insert->bindParam(':age', $this->age, PDO::PARAM_INT);
+        
         return $insert->execute();
     }
     

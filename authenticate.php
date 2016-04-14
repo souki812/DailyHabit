@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['task
         
         // Create user model
         require_once('models/user.php');
-        $user = new User($db, $_POST['username'], $_POST['password']);
+        $user = new User($db, $_POST['username'], $_POST['password'],  $_POST['gender'], $_POST['age']);
         
         // Attempt registration
         if ($_POST['task'] == 'register') {
