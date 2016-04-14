@@ -3,8 +3,8 @@
 session_start();
 
 // Should have form inputs
-if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['task'])) {
-
+if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])) {
+   echo ("Iam inside");
     // Connect to database
     require_once('models/database.php');
     $db = databaseConnection();
@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['task
         
         // Create user model
         require_once('models/user.php');
-        $user = new User($db, $_POST['username'], $_POST['password'],  $_POST['gender'], $_POST['age']);
+        $user = new User($db, $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age']);
         
         // Attempt registration
         if ($_POST['task'] == 'register') {
@@ -24,7 +24,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['task
             if ($success) {
                 $_SESSION['message'] = 'Registered! You can now log in.';
             } else {
-                $_SESSION['message'] = 'Sorry, that username is unavailable.';
+                $_SESSION['message'] = 'Sorry, there is an account with the same email.';
             }
         }
         

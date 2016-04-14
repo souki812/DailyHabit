@@ -81,7 +81,7 @@
                 
                 <form action="authenticate.php" method="post" class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input  placeholder="Email" name="username" class="form-control">   <!--type="email"-->
+                        <input  placeholder="Email" name="email" class="form-control">   <!--type="email"-->
                     </div>
                      <div class="form-group">
                         <input type="password" placeholder="Password" name="password" class="form-control">   
@@ -109,26 +109,36 @@
         <div class="col-md-6 margintop1">
             <h3>Sign Up Today!</h3>
                     <form action="authenticate.php" method="post" class="well">
+            
                         <div class="form-group">
-                            <label>Username</label>
-                            <input type="text" name="username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" name="password" class="form-control">
-                        </div>
-                       <div class="form-group">
-                            <label>Gender</label>
-                            <input type="gender" name="gender" class="form-control">
+                        <input type="text" class="form-control" name="first" placeholder="Enter First Name">
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
-                            <input type="age" name="age" class="form-control">
+                        <input type="text" class="form-control" name="last" placeholder="Enter Last Name">
                         </div>
-                       
-                        <input type="hidden" name="task" value="register">
+                        
+                        <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                        </div>
+                        
+                        <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                        </div>
+                        
+                        <div class="form-group">
+                        <input type="text" class="form-control" name="gender" placeholder="Enter Gender">
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                        <input type="text" class="form-control" name="age" placeholder="Enter Age">
+                        </div>
+                        
+                         <input type="hidden" name="task" value="register">
                         <button type="submit" class="btn btn-default">Register</button>
-                         </form>
+                        
+                    </form>
+                                
         </div> 
         </div> 
     </div>
@@ -155,7 +165,7 @@
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-            <button class="btn btn-success marginTop">Sign Up!</button>
+         
         </div>
         
         <div class="col-md-4 margintop1">
@@ -164,7 +174,7 @@
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-            <button class="btn btn-success marginTop">Sign Up!</button>
+      
         </div>
         
         <div class="col-md-4 margintop1">
@@ -173,7 +183,7 @@
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-            <button class="btn btn-success marginTop">Sign Up!</button>
+          
         </div>
     </div>
     
@@ -190,7 +200,7 @@
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-            <button class="btn btn-success marginTop">Sign Up!</button>
+        
         </div>
         
         <div class="col-md-4 margintop1">
@@ -199,7 +209,7 @@
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-            <button class="btn btn-success marginTop">Sign Up!</button>
+        
         </div>
         
         <div class="col-md-4 margintop1">
@@ -208,7 +218,7 @@
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-            <button class="btn btn-success marginTop">Sign Up!</button>
+          
         </div>
     </div>
   </div>

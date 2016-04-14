@@ -49,7 +49,8 @@
         <!--right container-->
         <div class="col-lg-6">
             <?php foreach ($selection as $row): ?>
-            <p>Username:   <?php echo htmlentities($row['username'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p>First Name:   <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p>Last Name:   <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p><br>
             <p>Gender:  <?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></p><br>
             <p>Age:  <?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
