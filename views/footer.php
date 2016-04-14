@@ -12,7 +12,7 @@
           
           // Send a request for recent messages via AJAX
           $.post('./newsfeed.php', {update_time: time}, function(response) {
-     
+                  
             // Add a table row for each message object we get
             $.each(response, function() {
               var tr = '<tr>' +
