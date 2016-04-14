@@ -47,14 +47,70 @@
         <div class="col-md-12 margintop1">
             <h3><span class="glyphicon glyphicon-pushpin"></span> Your Current Goal</h3>
         </div>
+        
+    
+
+        
+
+<!-- update your current goal text box-->
+<form action="" method="post" id="com">
+    <label> Date: <br><input type="text" name="date" size="36"></label><br><br>
+    <label> Description of Goal: <br><textarea cols="35" rows="5" name="mes"></textarea></label><br><br>
+    
+    <button type="submit" name="post"   class = "btn btn-info btn-md" >Add New Goal</button>
+    <!--  <input type="submit" name="post" value="Post">  -->
+
+</form>
+</html>
+
+<?php
+
+$date = $_POST["date"];
+$text = $_POST["mes"];
+$post = $_POST["post"];
+
+if($post) {
+    
+    # write down comments
+    $write = fopen("com.text", "a+");
+    fwrite($write, "<u><b> $date</b></u><br>$text</br>");
+    fclose($write);
+    
+    #display comments
+    $read = fopen("com.txt", "r+t");
+    echo "All comments:<br>";
+    
+    while(!feof($read)) {
+        echo fread($read, 1024);
+    }
+    
+    fclose($read);
+    
+}
+
+else {
+    
+    #display comments
+    $read = fopen("com.txt", "r+t");
+    echo "All comments:<br>";
+    
+    while(!feof($read)) {
+        echo fread($read, 1024);
+    }
+    
+    fclose($read);
+    
+}
+?>
 
 
+<!--
         <div class="text-right"><br><br>
             <button type="submit" class = "btn btn-info btn-lg" >Edit Goal</button>
-            <button type="submit" class = "btn btn-info btn-lg" >Add New Goal</button>
+            <button type="submit" name="addgoal"   class = "btn btn-info btn-lg" >Add New Goal</button>
         </div> 
-
-
+-->
 
     </div>
     </div><br>
+    
