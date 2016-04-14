@@ -58,7 +58,7 @@
            
         </style>
     </head>
-    <body data-spy="scroll" data-target=".navbar-collapse"> <!-- SCROLL SPY bootstrap -->
+    <body data-spy="scroll" data-target="#navigation"> <!-- SCROLL SPY bootstrap -->
         
         <div class="navbar navbar-default navbar-fixed-top">
             
@@ -72,7 +72,7 @@
                     <a class="navbar-brand">DailyHabit</a>
                 </div>
                 
-                <div class="collapse navbar-collapse"></div>
+                <div class="collapse navbar-collapse"  id="navigation">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#firstContainer">Home</a></li> <!--active makes it default page-->
                      <li><a href="#secondcontainer">About</a></li>
@@ -89,6 +89,8 @@
                      <input type="hidden" name="task" value="login">
                      <button type="submit" class="btn btn-success">Log In</button>
                 </form>
+                </div>
+                
             </div>
         </div>
 

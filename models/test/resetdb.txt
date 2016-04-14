@@ -1,6 +1,7 @@
 use cs332;
 
 drop table if exists users;
+drop table if exists chat;
 
 create table users (
 	username VARCHAR(16) NOT NULL,
@@ -10,3 +11,11 @@ create table users (
 );
 
 alter table users add UNIQUE KEY(username);
+
+
+
+create table chat (
+    ip VARCHAR(12) NOT NULL,
+    message VARCHAR(128) NOT NULL,
+    time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
