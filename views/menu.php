@@ -10,7 +10,7 @@
                     <a class="navbar-brand">DailyHabit</a>
                 </div>
                 
-                <div class="collapse navbar-collapse"></div>
+                <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                    <li <?php if ($_SERVER['REQUEST_URI'] == '/') echo 'class="active"'; ?>><a href="../">Home</a></li>
                             <li <?php if ($_SERVER['REQUEST_URI'] == '/activity.php') echo 'class="active"'; ?>><a href="../activity.php">Profile</a></li>
@@ -23,5 +23,6 @@
                      <input type="hidden" name="task" value="logout">
                      <button type="submit" class="btn btn-success" ><a href="../logout.php">Log Out</a></button>
                 </form>
+                </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-            <div class="row">
+        
 <?php require('menu.php');
 
 ?>
@@ -27,9 +27,14 @@
     .secondbutton{
         margin-left: 20px;
     }
+    
+    .page{
+       
+         padding-top: 100px; 
+    }
 </style>
     
-             <div class="container">
+ <div class="container page">
     <div class="row">
         
         <div class="col-md-6 col-md-offset-3  home" >
@@ -55,7 +60,7 @@
     <form>
         <div class="form-group">
             <label>NewsFeed</label>
-        <input type="text" class="form-control" value="What's on your mind?"  id="textarea"/>
+        <input type="text" class="form-control" placeholder="What's on your mind?"  id="textarea" autocomplete="off" autofocus/>
         </div>
     </form>
     

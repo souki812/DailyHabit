@@ -9,7 +9,5 @@
     <body>
         <div class="container">
             <div class="row">
-                <header class="page-header">
-                    <h1 class="text-center">DailyHabit</h1>
-                </header>
+              
             </div>

@@ -17,15 +17,18 @@
 .nav-tabs {
     margin-bottom: 0;
 }
+
+  .page{
+       
+         padding-top: 100px; 
+    }
 </style>
  
 
-<div class="container" id="firstContainer">
+<div class="container page" id="firstContainer">
  
 
-<div class="page-header">
-<h1>Daily Habit App</h1>
-</div><br><br>
+
  
  
 <div class="jumbotron">
