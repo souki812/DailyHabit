@@ -1,5 +1,7 @@
             <div class="row">
-<?php require('menu.php'); ?>
+<?php require('menu.php');
+
+?>
 
 <style>
     
@@ -56,4 +58,36 @@
         <input type="text" class="form-control" value="What's on your mind?"  id="textarea"/>
         </div>
     </form>
+    
+    
+    
+    
+    <div class="container">
+      <div class="row">
+        <br>
+        <form class="form">
+          <input type="text" class="form-control" id="message" placeholder="New message" autocomplete="off" autofocus>
+        </form>
+        <br>
+      </div>
+      <div class="row">
+        <table class="table table-bordered table-striped">
+          <thead class="bg-info">
+            <tr>
+              <td class="col-xs-1">Time</td>
+              <td class="col-xs-1">Sender</td>
+              <td>Message</td>
+            </tr>
+          </thead>
+          <tbody id="chat"></tbody>
+        </table>
+      </div>
+      <div class="row">
+        <p class="text-info">You joined at <?php echo substr($_SESSION['start_time'], 10); ?>.</p>
+      </div>
+    </div>
+   
+   
 </div>
+             
+   

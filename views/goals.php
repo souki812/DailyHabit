@@ -29,7 +29,7 @@
   
 
         <div class="col-md-6 margintop1 acheived">
-            <h3 class="text-left"><span class="glyphicon glyphicon-ok"></span> Your Acheived Goals</h3>
+            <h3 class="text-left"><span class="glyphicon glyphicon-ok"></span> Your Achieved Goals</h3>
 
         </div>
         
