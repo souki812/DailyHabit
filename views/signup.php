@@ -58,7 +58,7 @@
            
         </style>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar-collapse"> <!-- SCROLL SPY bootstrap -->
         
         <div class="navbar navbar-default navbar-fixed-top">
             
@@ -74,9 +74,9 @@
                 
                 <div class="collapse navbar-collapse"></div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#home">Home</a></li> <!--active makes it default page-->
-                     <li><a href="#about">About</a></li>
-                      <li><a href="#testimonial">Testimonial</a></li>
+                    <li class="active"><a href="#firstContainer">Home</a></li> <!--active makes it default page-->
+                     <li><a href="#secondcontainer">About</a></li>
+                      <li><a href="#thirdcontainer">Testimonial</a></li>
                 </ul>
                 
                 <form action="authenticate.php" method="post" class="navbar-form navbar-right">
