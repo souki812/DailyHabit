@@ -9,6 +9,8 @@ if (!isset($db)) {
   exit();
 }
 
+
+
 // Receive a new message
 if (isset($_POST['new_message'])) {
   $insert = $db->prepare('insert into chat(ip,message) values(:ip,:message)');

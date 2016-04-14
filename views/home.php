@@ -57,21 +57,14 @@
     
     
     
-    <form>
-        <div class="form-group">
-            <label>NewsFeed</label>
-        <input type="text" class="form-control" placeholder="What's on your mind?"  id="textarea" autocomplete="off" autofocus/>
-        </div>
-    </form>
-    
-    
+
     
     
     <div class="container">
       <div class="row">
         <br>
         <form class="form">
-          <input type="text" class="form-control" id="message" placeholder="New message" autocomplete="off" autofocus>
+          <input type="text" class="form-control" id="message" placeholder="What's on your mind?"   autocomplete="off" autofocus>
         </form>
         <br>
       </div>

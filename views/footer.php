@@ -11,8 +11,8 @@
         setInterval(function() {
           
           // Send a request for recent messages via AJAX
-          $.post('../newsfeed.php', {update_time: time}, function(response) {
-            
+          $.post('./newsfeed.php', {update_time: time}, function(response) {
+     
             // Add a table row for each message object we get
             $.each(response, function() {
               var tr = '<tr>' +
@@ -20,6 +20,8 @@
                           '<td class="col-xs-1">' + this.ip + '</td>' +
                           '<td>' + this.message + '</td>' +
                         '</tr>';
+                        
+                   
               $('#chat').prepend(tr);
               time = this.time; // Most recent message time
             });
@@ -31,8 +33,9 @@
           if (event.which == 13) { // Code for the Enter key
             event.preventDefault();
             var message = $(this).val().trim();
+            
             if (message) { // Don't send blank messages
-              $.post('../newsfeed.php', {new_message: message});
+              $.post('./newsfeed.php', {new_message: message});
               $(this).val('');
             }
           }
