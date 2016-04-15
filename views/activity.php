@@ -52,6 +52,44 @@
             <p>Biography:  <?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
         </div>
+        
+        
+        <div class="col-lg-6">
+            <?php foreach ($comments as $row): ?>
+            <p><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></p><br>
+    
+            <?php endforeach; ?>
+        </div>
+        
+        
+        <button class="btn btn-success" data-toggle="modal" data-target="#modal2">
+    Post a comment
+</button>
+
+
+<div class="modal" id="modal2">
+    
+    <div class="modal-dialog">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <form action="activity.php" method="post" class="well">
+                 <form class="form">
+                    <label >Comment</label>
+                    
+                    <textarea class="form-control" rows="5" id="comment" placeholder="Write Your Biography!"  name="newsfeed" autocomplete="off" autofocus>
+                       
+                    </textarea>
+                    <input type="hidden" name="task" value="newsfeed">
+                     <button type="submit" class="btn btn-success">Add</button>
+                </form>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
 
 
 <button class="btn btn-success" data-toggle="modal" data-target="#modal1">

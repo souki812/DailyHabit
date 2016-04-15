@@ -49,10 +49,12 @@
                     <button  class="btn btn-success firstbutton" ">Achieved!</button><button  class="btn btn-success secondbutton" >Edit Goal</button>
                     
                     <input type="text" class="form-control comment" value="Leave a comment.."/>
+                    
+                    
                 </div>
             </form>
         </div>
-    </div>
+    </div><br>
     
     
     
@@ -61,14 +63,23 @@
     
     
     <div class="container">
-      <div class="row">
-        <br>
-        <form class="form">
-          <input type="text" class="form-control" id="message" placeholder="What's on your mind?"   autocomplete="off" autofocus>
+      <div class="row" >
+        <form class="well" action="home.php"  method="post">
+          <input type="text" class="form-control" id="message" placeholder="What's on your mind?"  value="newsfeed" autocomplete="off" autofocus><br>
+          <input type="hidden" name="task" value="newsfeed"> 
+          <button  class="btn btn-success firstbutton">Post</button>
         </form>
-        <br>
       </div>
-      <div class="row">
+      
+      
+   <div class="col-lg-6">
+            <?php foreach ($comments as $row): ?>
+            <p><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></p><br>
+           <!-- <p><?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></p><br> -->
+            <?php endforeach; ?>
+        </div>  
+      
+ <!--     <div class="row">
         <table class="table table-bordered table-striped">
           <thead class="bg-info">
             <tr>
@@ -83,7 +94,7 @@
       <div class="row">
         <p class="text-info">You joined at <?php echo substr($_SESSION['start_time'], 10); ?>.</p>
       </div>
-    </div>
+    </div>  -->
    
    
    

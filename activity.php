@@ -6,7 +6,7 @@ session_start();
 require_once('models/database.php');
 $db = databaseConnection();
 
-
+$today = getdate();
 
 // Must be logged in
 if (!isset($_SESSION['user_id'])) {
@@ -23,13 +23,24 @@ $id = $_SESSION['user_id'];
         require_once('models/user.php');
         $user = new User($db);
         
-        // Attempt registration
+        //Add a biography
         if ($_POST['task'] == 'biography') {
             $success = $user->bio($id,  $_POST['biography']);
 
         }
+        
+        //Add a comment
+        
+        if (isset($_POST['task'])) {
+        if ($_POST['task'] == 'newsfeed') {
+            $success = $user->newsfeed(  $_POST['newsfeed'], $id);
+        }   
+        }
+ 
     }
 $selection = $db->query("select * from users where user_id=$id");
+$comments =  $db->query("select * from newsfeed where user_id=$id");
+
 
 // Show whatever this activity is
 require('views/header.php');

@@ -27,6 +27,14 @@ class User {
         return $insert->execute();
     }
 	
+	function newsfeed($comment, $id){
+		$insert = $this->db->prepare("insert into newsfeed(comment, user_id) values(:comment, :user_id)");
+        $insert->bindParam(':comment', $comment, PDO::PARAM_STR);
+		//$insert->bindParam(':date', $date, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+	
 	
 	function bio($id, $biography){
 		
