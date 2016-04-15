@@ -4,16 +4,9 @@
 class User {
     
     private $db; // PDO connection
-    private $first, $last, $email, $password, $gender, $age, $biography; // Credentials offered
     
-    function __construct($db, $first, $last, $email, $password, $gender, $age) {
+    function __construct($db) {
         $this->db = $db;
-        $this->first = $first;
-        $this->last = $last; 
-        $this->email = $email;
-        $this->password = $password;
-         $this->gender = $gender;
-          $this->age = $age;
     }
     
    /** function select($id){
@@ -21,35 +14,35 @@ class User {
 	} **/
     
     // Attempt to add this user and return whether it worked
-    function register() {
-        $hash = password_hash($this->password, PASSWORD_DEFAULT);
+    function register($first, $last, $email, $password, $gender, $age) {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
         $insert = $this->db->prepare('insert into users(first,last,email,password,gender,age) values(:first,:last,:email,:password,:gender,:age)');
-        $insert->bindParam(':first', $this->first, PDO::PARAM_STR);
-        $insert->bindParam(':last', $this->last, PDO::PARAM_STR);
-        $insert->bindParam(':email', $this->email, PDO::PARAM_STR);
+        $insert->bindParam(':first', $first, PDO::PARAM_STR);
+        $insert->bindParam(':last', $last, PDO::PARAM_STR);
+        $insert->bindParam(':email', $email, PDO::PARAM_STR);
         $insert->bindParam(':password', $hash, PDO::PARAM_STR);
-        $insert->bindParam(':gender', $this->gender, PDO::PARAM_STR);
-        $insert->bindParam(':age', $this->age, PDO::PARAM_INT);
+        $insert->bindParam(':gender', $gender, PDO::PARAM_STR);
+        $insert->bindParam(':age', $age, PDO::PARAM_INT);
         
         return $insert->execute();
     }
 	
 	
-	function bio(){
-		$this->biography = $biography;
-		$insert = $this->db->prepare('insert into users(biography) values(:biography)');
-        $insert->bindParam(':biography', $this->biography, PDO::PARAM_STR);
+	function bio($id, $biography){
+		
+		$insert = $this->db->prepare("UPDATE users SET biography=:biography WHERE user_id=$id");
+        $insert->bindParam(':biography', $biography, PDO::PARAM_STR);
 		return $insert->execute();
 	}
     
     // Attempt to return the ID of this user
-    function login() {
+    function login($email, $password) {
         $select = $this->db->prepare('select * from users where email=:email');
-        $select->bindParam(':email', $this->email, PDO::PARAM_STR);
+        $select->bindParam(':email', $email, PDO::PARAM_STR);
         $select->execute();
         
         $row = $select->fetch(PDO::FETCH_ASSOC);
-        if (isset($row) && password_verify($this->password, $row['password'])) {
+        if (isset($row) && password_verify($password, $row['password'])) {
             return $row['user_id'];
         } else {
             return NULL;

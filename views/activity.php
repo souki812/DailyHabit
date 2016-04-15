@@ -27,10 +27,6 @@
 
 <div class="container page" id="firstContainer">
  
-
-
- 
- 
 <div class="jumbotron">
 
 <p>Your Profile</p>
@@ -53,6 +49,7 @@
             <p>Last Name:   <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p><br>
             <p>Gender:  <?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></p><br>
             <p>Age:  <?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></p>
+            <p>Biography:  <?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
         </div>
 
@@ -86,21 +83,10 @@
     
 </div>
 
-
-<div id="bio_box">
-      <form method="post">
-                <div class="form-group">
-                    <label >Biography</label>
-                    
-                    <?php foreach ($selection as $row): ?>
-                    <textarea class="form-control" rows="5" id="biography" placeholder="Write Your Biography!"   autocomplete="off" autofocus></textarea>
-                     <?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?>
-                </div>
-                <?php endforeach; ?>
-            </form>
-</div>
         
-    </div>
+         </div>
+    
+    
     <div class="text-right"><br><br>
     <form action="upload.php" method="post" enctype="multipart/form-data">
      
@@ -120,48 +106,6 @@
 </div>
 </div>
 
-<!-- input -->
- <div class="container">
-  <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h3 class="text-center">Your Daily Summary</h3>
-    <hr>
-    <form action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
-      
-      <div class="share">
-        <div class="arrow"></div>
-        <div class="panel panel-default">
-                      <div class="panel-heading"><i class="fa fa-file"></i> Today's Habit</div>
-                      <div class="panel-body">
-                        <div class="">
-                            <textarea name="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?"></textarea> 
-                        </div>
-                      </div>
-            <div class="panel-footer">
-                <div class="row">
-                  <div class="col-md-7"></div>
-                  <div class="col-md-5">
-                    <div class="form-group">                                   
-                      <input type="submit" name="submit" value="Post" class="btn btn-primary">                                  
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-      </div>
-      </div>
-    </form>
-  </div>
-  </div>
-  </div> 
- 
-<div class="container">
-    
-<!-- delete account -->
-<a href="#" class="list-group-item">
-  <h4 class="list-group-item-heading">Delete Account</h4>
-  <p class="list-group-item-text">The account will be permanently deleted</p>
-</div>
 
 
   

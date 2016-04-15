@@ -15,11 +15,11 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
         
         // Create user model
         require_once('models/user.php');
-        $user = new User($db, $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age']);
+        $user = new User($db);
         
         // Attempt registration
         if ($_POST['task'] == 'register') {
-            $success = $user->register();
+            $success = $user->register( $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age']);
             
             if ($success) {
                 $_SESSION['message'] = 'Registered! You can now log in.';
@@ -30,7 +30,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
         
         // Or attempt login
         elseif ($_POST['task'] == 'login') {
-            $user_id = $user->login();
+            $user_id = $user->login($_POST['email'], $_POST['password']);
             
             if (isset($user_id)) {
                 session_regenerate_id(true); // New session for login
