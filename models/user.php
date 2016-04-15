@@ -4,9 +4,9 @@
 class User {
     
     private $db; // PDO connection
-    private $first, $last, $email, $password, $gender, $age; // Credentials offered
+    private $first, $last, $email, $password, $gender, $age, $biography; // Credentials offered
     
-    function __construct($db, $first, $last, $email, $password, $gender, $age ) {
+    function __construct($db, $first, $last, $email, $password, $gender, $age) {
         $this->db = $db;
         $this->first = $first;
         $this->last = $last; 
@@ -33,6 +33,14 @@ class User {
         
         return $insert->execute();
     }
+	
+	
+	function bio(){
+		$this->biography = $biography;
+		$insert = $this->db->prepare('insert into users(biography) values(:biography)');
+        $insert->bindParam(':biography', $this->biography, PDO::PARAM_STR);
+		return $insert->execute();
+	}
     
     // Attempt to return the ID of this user
     function login() {

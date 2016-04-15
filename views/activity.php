@@ -56,6 +56,49 @@
             <?php endforeach; ?>
         </div>
 
+
+<button class="btn btn-success" data-toggle="modal" data-target="#modal1">
+    Add Your Biography
+</button>
+
+
+<div class="modal" id="modal1">
+    
+    <div class="modal-dialog">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <form action="activity.php" method="post" class="well">
+                 <form class="form">
+                    <label >Biography</label>
+                    
+                    <textarea class="form-control" rows="5" id="biography" placeholder="Write Your Biography!"  name="biography" autocomplete="off" autofocus>
+                       
+                    </textarea>
+                    <input type="hidden" name="task" value="biography">
+                     <button type="submit" class="btn btn-success">Add</button>
+                </form>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+<div id="bio_box">
+      <form method="post">
+                <div class="form-group">
+                    <label >Biography</label>
+                    
+                    <?php foreach ($selection as $row): ?>
+                    <textarea class="form-control" rows="5" id="biography" placeholder="Write Your Biography!"   autocomplete="off" autofocus></textarea>
+                     <?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?>
+                </div>
+                <?php endforeach; ?>
+            </form>
+</div>
         
     </div>
     <div class="text-right"><br><br>

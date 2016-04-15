@@ -16,10 +16,14 @@ if (!isset($_SESSION['user_id'])) {
 
 
 
+
+ if ($_POST['task'] == 'biography') {
+            $success = $user->bio();
+        }
+
+
 $id = $_SESSION['user_id'];
 $selection = $db->query("select * from users where user_id=$id");
-
-
 
 // Show whatever this activity is
 require('views/header.php');

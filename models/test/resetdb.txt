@@ -10,8 +10,11 @@ create table users (
 	password VARCHAR(255) NOT NULL,
 	gender VARCHAR(16) NOT NULL,
     age INT NOT NULL,
+	biography VARCHAR(255),
 	user_id INT AUTO_INCREMENT PRIMARY KEY
 );
+
+
 
 alter table users add UNIQUE KEY(email);
 

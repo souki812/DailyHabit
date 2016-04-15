@@ -4,7 +4,7 @@ session_start();
 
 // Should have form inputs
 if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])) {
-   echo ("Iam inside");
+   
     // Connect to database
     require_once('models/database.php');
     $db = databaseConnection();
