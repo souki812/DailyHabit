@@ -65,38 +65,14 @@
     <div class="container">
       <div class="row" >
         <form class="well" action="home.php"  method="post">
-          <input type="text" class="form-control" id="message" placeholder="What's on your mind?"  value="newsfeed" autocomplete="off" autofocus><br>
+          <input type="text" class="form-control" id="message" placeholder="What's on your mind?" autocomplete="off" autofocus><br>
           <input type="hidden" name="task" value="newsfeed"> 
           <button  class="btn btn-success firstbutton">Post</button>
         </form>
       </div>
       
       
-   <div class="col-lg-6">
-            <?php foreach ($comments as $row): ?>
-            <p><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></p><br>
-           <!-- <p><?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></p><br> -->
-            <?php endforeach; ?>
-        </div>  
-      
- <!--     <div class="row">
-        <table class="table table-bordered table-striped">
-          <thead class="bg-info">
-            <tr>
-              <td class="col-xs-1">Time</td>
-              <td class="col-xs-1">Sender</td>
-              <td>Message</td>
-            </tr>
-          </thead>
-          <tbody id="chat"></tbody>
-        </table>
-      </div>
-      <div class="row">
-        <p class="text-info">You joined at <?php echo substr($_SESSION['start_time'], 10); ?>.</p>
-      </div>
-    </div>  -->
-   
-   
+
    
    <div class="container">
   <h2>Your Progress:</h2>

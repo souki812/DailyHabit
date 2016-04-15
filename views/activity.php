@@ -3,10 +3,7 @@
              
  
 <style>
-.jumbotron{
-    background-color:#2E2D88;
-    color:white;
-}
+
 /* Adds borders for tabs */
 .tab-content {
     border-left: 1px solid #ddd;
@@ -22,16 +19,34 @@
        
          padding-top: 100px; 
     }
+    
+    .profile{
+        border: 1px solid grey;
+    }
+    
+    .comment{
+        border: 1px solid grey;
+        margin-bottom: 20px;
+    }
+     .firstbutton{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .secondbutton{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
 </style>
  
 
 <div class="container page" id="firstContainer">
- 
-<div class="jumbotron">
+ <div class="row">
+        
+        <div class="col-md-6 col-md-offset-2  profile" >
+            <div>
+                 <h4>Profile</h4>
+            </div>
 
-<p>Your Profile</p>
- <div class="container-fluid">
-    <div class="row">
         <!--left container-->
         <div class="col-sm-5">
              <aside>
@@ -45,26 +60,17 @@
         <!--right container-->
         <div class="col-lg-6">
             <?php foreach ($selection as $row): ?>
-            <p>First Name:   <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
-            <p>Last Name:   <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p><br>
-            <p>Gender:  <?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></p><br>
-            <p>Age:  <?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></p>
-            <p>Biography:  <?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
+            <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p><?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></p><br>
+            <p><?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></p>
+            <label>About me:</label>
+            <p><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
         </div>
         
         
-        <div class="col-lg-6">
-            <?php foreach ($comments as $row): ?>
-            <p><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></p><br>
-    
-            <?php endforeach; ?>
-        </div>
-        
-        
-        <button class="btn btn-success" data-toggle="modal" data-target="#modal2">
-    Post a comment
-</button>
+       
 
 
 <div class="modal" id="modal2">
@@ -92,10 +98,11 @@
 </div>
 
 
-<button class="btn btn-success" data-toggle="modal" data-target="#modal1">
-    Add Your Biography
-</button>
 
+
+
+<button  class="btn btn-success firstbutton"  data-toggle="modal" data-target="#modal1" ">Add Biography</button>
+<button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
 
 <div class="modal" id="modal1">
     
@@ -125,24 +132,26 @@
          </div>
     
     
-    <div class="text-right"><br><br>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-     
-     Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-    
-    
-   <!-- <button type="submit" class = "btn btn-warning btn-lg" >Edit Profile</button>
-    <button type="submit" class = "btn btn-warning btn-lg" >Edit Photo</button> -->
         
-    </form>
+
 </div> 
 </div>
- 
- 
+
+<div class="container page" id="firstContainer">
+ <div class="row">
+         <?php foreach ($comments as $row): ?>
+        <div class="col-md-6 col-md-offset-2  comment" >
+            <h4>Comment</h4>
+            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+        </div>
+            <?php endforeach; ?>
+       
+        
+  </div>
+ </div>
 </div>
-</div>
+ 
+
 
 
 
