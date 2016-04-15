@@ -141,7 +141,7 @@
  <div class="row">
          <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-2  comment" >
-            <h4>Comment</h4>
+            <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
         </div>
             <?php endforeach; ?>

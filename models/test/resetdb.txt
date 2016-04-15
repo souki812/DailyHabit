@@ -17,6 +17,7 @@ alter table users add UNIQUE KEY(email);
 
 create table newsfeed (
     comment VARCHAR(255) NOT NULL,
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	user_id INT NOT NULL
 );
 
