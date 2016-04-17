@@ -33,13 +33,13 @@ $id = $_SESSION['user_id'];
         
         if (isset($_POST['task'])) {
         if ($_POST['task'] == 'newsfeed') {
-            $success = $user->newsfeed(  $_POST['newsfeed'], $id);
+            $success = $user->newsfeed( $_POST['newsfeed'], $id);
         }   
         }
  
     }
 $selection = $db->query("select * from users where user_id=$id");
-$comments =  $db->query("select * from newsfeed where user_id=$id");
+$comments =  $db->query("select * from newsfeed where user_id=$id ORDER BY time DESC");
 
 
 // Show whatever this activity is
