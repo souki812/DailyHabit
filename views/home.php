@@ -1,7 +1,5 @@
         
-<?php require('menu.php');
-
-?>
+<?php require('menu.php'); ?>
 
 <style>
     
@@ -17,15 +15,17 @@
      
     }
     
-    .comment{
-        
-        margin-top: 20px;
+      .comment{
+        border: 1px solid grey;
+        margin-bottom: 20px;
     }
     .firstbutton{
         margin-left: 40px;
+        margin-bottom: 10px;
     }
     .secondbutton{
         margin-left: 20px;
+        margin-bottom: 10px;
     }
     
     .page{
@@ -60,7 +60,7 @@
     
     
 
-    
+   <!-- 
     
     <div class="container">
       <div class="row" >
@@ -69,7 +69,7 @@
           <input type="hidden" name="task" value="newsfeed"> 
           <button  class="btn btn-success firstbutton">Post</button>
         </form>
-      </div>
+      </div>  -->
       
       
 
@@ -84,6 +84,59 @@
   </div>
 </div>
    
+   
+   
+     <div class="container page" >
+ <div class="row">
+   <div class="col-md-6 col-md-offset-3  comment" >
+    <h4>Newsfeed</h4>
+  <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal3" >Post a comment</button>
+ 
+    </div>
+   </div>
+ 
+ 
+ 
+ 
+<div class="container page">
+ <div class="row">
+ 
+   <?php foreach ($comments as $row): ?>
+        <div class="col-md-6 col-md-offset-3  comment" >
+            <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+        </div>
+            <?php endforeach; ?>
+ 
+ </div>
+</div>
+ 
+ 
+<div class="modal" id="modal3">
+    
+    <div class="modal-dialog">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <form action="home.php" method="post" class="well">
+                 <form class="form">
+                    <label >Comment</label>
+                    
+                    <textarea class="form-control" rows="5" id="comment1"  name="newsfeed" autocomplete="off" autofocus>
+                       
+                    </textarea>
+                    <input type="hidden" name="task" value="newsfeed">
+                     <button type="submit" class="btn btn-success">Add</button>
+                </form>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+   
+
 </div>
              
    

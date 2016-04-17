@@ -6,7 +6,6 @@ session_start();
 require_once('models/database.php');
 $db = databaseConnection();
 
-$today = time();
 
 // Must be logged in
 if (!isset($_SESSION['user_id'])) {

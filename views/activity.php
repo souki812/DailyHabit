@@ -83,7 +83,7 @@
                  <form class="form">
                     <label >Comment</label>
                     
-                    <textarea class="form-control" rows="5" id="comment" placeholder="Write Your Biography!"  name="newsfeed" autocomplete="off" autofocus>
+                    <textarea class="form-control" rows="5" id="comment"   name="newsfeed" autocomplete="off" autofocus>
                        
                     </textarea>
                     <input type="hidden" name="task" value="newsfeed">
