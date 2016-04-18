@@ -1,4 +1,4 @@
-
+<?php require('menu.php'); ?>
             <style>
                 #leftcol {
                     background-color:#E6E1DF;
