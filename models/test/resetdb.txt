@@ -22,20 +22,22 @@ create table newsfeed (
 );
 
 
-create table goals(
+create table current(
 	current VARCHAR(255),
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL
+);
+
+create table future(
+	future VARCHAR(255),
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL
+);
+
+create table achieved(
 	achieved VARCHAR(255),
 	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	user_id INT NOT NULL
 );
 
 
-
-
-
-
-create table chat (
-    ip VARCHAR(12) NOT NULL,
-    message VARCHAR(128) NOT NULL,
-    time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-);

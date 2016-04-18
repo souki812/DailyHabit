@@ -42,6 +42,31 @@ class User {
         $insert->bindParam(':biography', $biography, PDO::PARAM_STR);
 		return $insert->execute();
 	}
+	
+		
+	function current($current, $id){
+		
+		$insert = $this->db->prepare("insert into current(current,user_id) values(:current,:user_id)");
+        $insert->bindParam(':current', $current, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+		
+	function achieved($achieved, $id){
+		
+		$insert = $this->db->prepare("insert into achieved(achieved,user_id) values(:achieved,:user_id)");
+        $insert->bindParam(':achieved', $achieved, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+		
+	function future($future, $id){
+		
+		$insert = $this->db->prepare("insert into future(future,user_id) values(:future,:user_id)");
+        $insert->bindParam(':future', $future, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
     
     // Attempt to return the ID of this user
     function login($email, $password) {
