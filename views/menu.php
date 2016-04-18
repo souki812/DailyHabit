@@ -15,7 +15,7 @@
                    <li <?php if ($_SERVER['REQUEST_URI'] == '/home.php') echo 'class="active"'; ?>><a href="../home.php">Home</a></li>
                             <li <?php if ($_SERVER['REQUEST_URI'] == '/activity.php') echo 'class="active"'; ?>><a href="../activity.php">Profile</a></li>
                             <li <?php if ($_SERVER['REQUEST_URI'] == '/goals.php') echo 'class="active"'; ?>><a href="../goals.php">Goals</a></li>
-                            <li ><a href="../activity.php">Community</a></li>
+                            <li <?php if ($_SERVER['REQUEST_URI'] == '/community.php') echo 'class="active"'; ?>><a href="../community.php">Community</a></li>
                             
                 </ul>
                 
