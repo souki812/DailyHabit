@@ -12,7 +12,7 @@
                 
                 <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                   <li <?php if ($_SERVER['REQUEST_URI'] == '/') echo 'class="active"'; ?>><a href="../">Home</a></li>
+                   <li <?php if ($_SERVER['REQUEST_URI'] == '/home.php') echo 'class="active"'; ?>><a href="../home.php">Home</a></li>
                             <li <?php if ($_SERVER['REQUEST_URI'] == '/activity.php') echo 'class="active"'; ?>><a href="../activity.php">Profile</a></li>
                             <li <?php if ($_SERVER['REQUEST_URI'] == '/goals.php') echo 'class="active"'; ?>><a href="../goals.php">Goals</a></li>
                             <li ><a href="../activity.php">Community</a></li>
