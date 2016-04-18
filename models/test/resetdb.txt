@@ -22,6 +22,14 @@ create table newsfeed (
 );
 
 
+create table goals(
+	current VARCHAR(255),
+	achieved VARCHAR(255),
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL
+);
+
+
 
 
 

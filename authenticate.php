@@ -43,5 +43,5 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
 }
 
 // Return home
-header('Location: ./');
+header('Location: ./home.php');
 exit();
