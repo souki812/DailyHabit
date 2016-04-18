@@ -29,7 +29,7 @@
         margin-bottom: 20px;
     }
      .firstbutton{
-        margin-left: 20px;
+        margin-left: 280px;
         margin-bottom: 20px;
     }
     .secondbutton{
@@ -54,8 +54,16 @@
                 <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png">  
             </figure>
             </aside>
-            
+             
+             
+             <!--upload image-->
+             <form class="form" method="POST" enctype="multipart/form-data" action="activity.php">
+                <h5 class="form-signinheading">Upload a new image</h5>
+                <input type="file" name="img">
+                <button class="btn btn-sm btn-success" type="submit">Upload</button>
+            </form>
         </div>
+        
 
         <!--right container-->
         <div class="col-lg-6">
@@ -68,8 +76,6 @@
             <p><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
         </div>
-        
-        
        
 
 
@@ -101,7 +107,8 @@
 
 
 
-<button  class="btn btn-success firstbutton"  data-toggle="modal" data-target="#modal1" ">Add Biography</button>
+
+<button  class="btn btn-success firstbutton"  data-toggle="modal" data-target="#modal1" >Add Biography</button>
 <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
 
 <div class="modal" id="modal1">
@@ -150,9 +157,5 @@
   </div>
  </div>
 </div>
- 
-
-
-
-
+  
   
