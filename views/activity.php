@@ -57,11 +57,10 @@
              
              
              <!--upload image-->
-             <form class="form" method="POST" enctype="multipart/form-data" action="activity.php">
-                <h5 class="form-signinheading">Upload a new image</h5>
-                <input type="file" name="img">
-                <button class="btn btn-sm btn-success" type="submit">Upload</button>
-            </form>
+            <form action="image.php" method="post" enctype="multipart/form-data"><br>
+Type (or select) Filename: <input type="file" name="uploadFile">
+<input type="submit" value="Upload File">
+</form>
         </div>
         
 
