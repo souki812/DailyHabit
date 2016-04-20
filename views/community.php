@@ -57,6 +57,7 @@
                 
                 
             </style>
+     
             
             
             <!------------------------------------------------------------>
@@ -72,7 +73,11 @@
                             <!-- <img src="views/images/goals.jpg" alt="The Acropololis"/> --> 
                         </a>
                         <div class="media-body"><br>
-                            <h4><a>Name: </a></h4>
+                            <h4><a name="fullName">Name: 
+                            <?php foreach ($selection as $row): ?>
+                            <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
+                            <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p>
+                            <?php endforeach; ?> </a></h4>
                         </div>
                         
                         
@@ -88,7 +93,11 @@
                             <!-- <img src="views/images/goals.jpg" alt="The Acropololis"/> --> 
                         </a>
                         <div class="media-body"><br>
-                            <h4><a>Name: </a></h4>
+                            <h4><a name="fullName">Name: 
+                            <?php foreach ($selection as $row): ?>
+                            <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
+                            <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p>
+                            <?php endforeach; ?> </a></h4>
                         </div>
                     </div>
                     
