@@ -43,45 +43,33 @@
             </div>
            
             
-            <form method="post">
+            <form method="post" action="home.php">
                 <div class="form-group">
+                    
+                    
+                    <input type = "hidden" name = "counter" value = "<?php print $counter; ?>" >
+                    <input type = "submit" name = "button" value = "Submit" >
+                    
+                    
                     <label >Have you achieved today's Habit?</label>
-                    <button  class="btn btn-success firstbutton" ">Achieved!</button><button  class="btn btn-success secondbutton" >Edit Goal</button>
-                    
+                    <button  class="btn btn-success firstbutton" id="achievedbutton" ">Achieved!</button><button  class="btn btn-success secondbutton" >Edit Goal</button>
                     <input type="text" class="form-control comment" value="Leave a comment.."/>
-                    
-                    
+                
                 </div>
             </form>
         </div>
     </div><br>
     
     
-    
-    
-
-   <!-- 
-    
-    <div class="container">
-      <div class="row" >
-        <form class="well" action="home.php"  method="post">
-          <input type="text" class="form-control" id="message" placeholder="What's on your mind?" autocomplete="off" autofocus><br>
-          <input type="hidden" name="task" value="newsfeed"> 
-          <button  class="btn btn-success firstbutton">Post</button>
-        </form>
-      </div>  -->
-      
-      
 
    
    <div class="container">
   <h2>Your Progress:</h2>
   <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-      40%
+   <div class="progress progress-striped active">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        </div>
     </div>
-  </div>
 </div>
    
    

@@ -24,6 +24,11 @@ $id = $_SESSION['user_id'];
       $user = new User($db);
         
         
+    $counter = isset($_POST['counter']) ? $_POST['counter'] : 0;
+    if(isset($_POST["button"])){
+        $counter++;
+        echo $counter;
+    }
 if (isset($_POST['task'])) {
     
          //Add a comment 

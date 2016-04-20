@@ -43,6 +43,13 @@ class User {
 		return $insert->execute();
 	}
 	
+	function progress($id, $progress){
+		
+		$insert = $this->db->prepare("UPDATE users SET progress=:progress WHERE user_id=$id");
+        $insert->bindParam(':progress', $progress, PDO::PARAM_STR);
+		return $insert->execute();
+	}
+	
 		
 	function current($current, $id){
 		
