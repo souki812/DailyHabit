@@ -2,6 +2,11 @@
 //activity.php
 session_start();
 
+
+require_once('models/database.php');
+$db = databaseConnection();
+
+
 // Must be logged in
 if (!isset($_SESSION['user_id'])) {
     header('Location: ./');
@@ -21,21 +26,9 @@ $id = $_SESSION['user_id'];
       require_once('models/user.php');
       $user = new User($db);
         
-/*        
-if (isset($_POST['task'])) {
-    
-         // Click on a user 
-        if ($_POST['task'] == 'fullName') {
-            $success = $user->users(  $_POST['fullName'], $id);
-            
-        }
-        
     }
 
-}
-*/
-
-$selection = $db->query("select * from users where user_id=$id");
+$selection = $db->query("select * from users");
 $fullName = $db->query("select * from users where user_id=$id");
 
 // Show whatever this activity is

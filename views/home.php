@@ -69,10 +69,10 @@
   <h2>Your Progress:</h2>
   <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
    <div class="progress progress-striped active">
-         <?php foreach ($comments as $row): ?>
-        <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo htmlentities($row['progress'], ENT_QUOTES, 'utf-8'); ?>" aria-valuemin="0" aria-valuemax="100">
+         
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:40%">
         </div>
-    <?php endforeach; ?>
+    
     </div>
 </div>
    

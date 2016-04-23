@@ -1,15 +1,6 @@
 <?php require('menu.php'); ?>
             <style>
-                #leftcol {
-                    background-color:#E6E1DF;
-                    color:#cfcac8;
-                }
-                
-                 #rightcol {
-                    background-color:#E6E1DF;
-                    color:#cfcac8;
-                }
-                
+             
                 #first {
                     
                     background: url("../views/images/scene1.jpg");
@@ -55,58 +46,54 @@
                     color:white;
                 }
                 
+                .top{
+                    padding-top: 100px;
+                }
+                
+                .container{
+                    margin-bottom: 20px;
+                }
+                
                 
             </style>
-     
+           <h2><span class="glyphicon glyphicon-user top"></span> Community</h2><br>
+              <?php foreach ($selection as $row): ?>
+            <div class="container">
             
             
-            <!------------------------------------------------------------>
-            <h2><span class="glyphicon glyphicon-user"></span> Community</h2><br>
             <div class="row">
-                <!--Left main column-->
-                <div class="col-md-8">
-                    <!--Left column-->
+              
+                <div class="col-md-8 col-md-offset-3">
                     <div class="col-md-6" id="leftcol" style="border:solid">
                     <div class="media">
                         <a href="#" class = "thumbnail pull-left">        <!-- class= pull-left -->
                             <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png" width="70" height="70" alt="The Acropololis"/>
-                            <!-- <img src="views/images/goals.jpg" alt="The Acropololis"/> --> 
+            
                         </a>
                         <div class="media-body"><br>
-                            <h4><a name="fullName">Name: 
-                            <?php foreach ($selection as $row): ?>
-                            <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
-                            <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p>
-                            <?php endforeach; ?> </a></h4>
+                            <h4>Name: </h4>
+                           
+                            <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?>
+                           
+                           
                         </div>
                         
                         
                     </div>  
                     </div>
-                    
-                    
-                    <!--Right column-->
-                    <div class="col-md-6" id="rightcol" style="border:solid">
-                    <div class="media">
-                        <a href="#" class = "thumbnail pull-left">        <!-- class= pull-left -->
-                            <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png" width="70" height="70" alt="The Acropololis"/> 
-                            <!-- <img src="views/images/goals.jpg" alt="The Acropololis"/> --> 
-                        </a>
-                        <div class="media-body"><br>
-                            <h4><a name="fullName">Name: 
-                            <?php foreach ($selection as $row): ?>
-                            <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
-                            <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p>
-                            <?php endforeach; ?> </a></h4>
-                        </div>
-                    </div>
-                    
-                </div>  <!--End of main column-->
+                </div>
             </div>
-                
-                
-                
-                <div class="row">
+                    
+               
+         
+                </div>
+             <?php endforeach; ?>
+<!------------------------------------------------------------>
+
+
+
+<div class="container">
+    <div class="row">
                     <!--Right main column-->
                     <div class="col-md-4">
                         <p> Right main content</p>
@@ -133,4 +120,5 @@
                         </div>
                     </div>
                 </div>
-<!------------------------------------------------------------>
+
+</div>
