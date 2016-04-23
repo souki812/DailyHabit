@@ -30,7 +30,6 @@ class User {
 	function newsfeed($comment, $id){
 		$insert = $this->db->prepare("insert into newsfeed(comment,user_id) values(:comment,:user_id)");
         $insert->bindParam(':comment', $comment, PDO::PARAM_STR);
-		//$insert->bindParam(':date', $date, PDO::PARAM_STR);
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
@@ -43,12 +42,14 @@ class User {
 		return $insert->execute();
 	}
 	
-	function progress($id, $progress){
+	function progress($progress, $id){
 		
 		$insert = $this->db->prepare("UPDATE users SET progress=:progress WHERE user_id=$id");
         $insert->bindParam(':progress', $progress, PDO::PARAM_STR);
-		return $insert->execute();
+		$insert->execute();
+		return $progress;
 	}
+
 	
 		
 	function current($current, $id){

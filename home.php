@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $id = $_SESSION['user_id'];
-
+$val = $_POST['val'];
 
  if (!isset($db)) {
         $_SESSION['message'] = "Could not connect to the database.";
@@ -24,10 +24,7 @@ $id = $_SESSION['user_id'];
       $user = new User($db);
         
         
-    $counter = isset($_POST['counter']) ? $_POST['counter'] : 0;
-    if(isset($_POST["button"])){
-        $counter++;
-        echo $counter;
+  
     }
 if (isset($_POST['task'])) {
     
@@ -36,9 +33,15 @@ if (isset($_POST['task'])) {
             $success = $user->newsfeed(  $_POST['newsfeed'], $id);
             
         }
+          //Add a comment 
+        if ($_POST['task'] == 'progress') {
+            $val = $val + 5;
+            $success = $user->progress(  $val, $id);
+            echo $success;
+        }
     }
 
-}
+
     
 $selection = $db->query("select * from users where user_id=$id");
 $comments =  $db->query("select * from newsfeed where user_id=$id ORDER BY time DESC");

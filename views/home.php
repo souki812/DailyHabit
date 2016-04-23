@@ -46,13 +46,15 @@
             <form method="post" action="home.php">
                 <div class="form-group">
                     
-                    
-                    <input type = "hidden" name = "counter" value = "<?php print $counter; ?>" >
-                    <input type = "submit" name = "button" value = "Submit" >
+    
                     
                     
                     <label >Have you achieved today's Habit?</label>
-                    <button  class="btn btn-success firstbutton" id="achievedbutton" ">Achieved!</button><button  class="btn btn-success secondbutton" >Edit Goal</button>
+                     <input type="hidden" name="task" value="progress">
+                     <button class="btn btn-success firstbutton" id="target" type="button">Achieved</button>
+                    <div id="output"></div>
+
+                   <button  class="btn btn-success secondbutton" >Edit Goal</button>
                     <input type="text" class="form-control comment" value="Leave a comment.."/>
                 
                 </div>
@@ -67,8 +69,10 @@
   <h2>Your Progress:</h2>
   <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
    <div class="progress progress-striped active">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+         <?php foreach ($comments as $row): ?>
+        <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo htmlentities($row['progress'], ENT_QUOTES, 'utf-8'); ?>" aria-valuemin="0" aria-valuemax="100">
         </div>
+    <?php endforeach; ?>
     </div>
 </div>
    
