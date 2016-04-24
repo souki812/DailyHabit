@@ -55,12 +55,22 @@
             </figure>
             </aside>
              
-             
-             <!--upload image-->
-            <form action="image.php" method="post" enctype="multipart/form-data"><br>
-Type (or select) Filename: <input type="file" name="uploadFile">
-<input type="submit" value="Upload File">
-</form>
+        <div class="upload-wrapper">
+            <div class="upload-click">
+            <button> Upload Image</button>   
+            </div>
+            <div class="upload-image" style="display:none">
+            </div>
+            <input type ="file" id="input-file-upload" style="display:none">
+        </div>
+        <div id="server-response"></div>
+        
+        
+        
+        
+        
+        
+        
         </div>
         
 

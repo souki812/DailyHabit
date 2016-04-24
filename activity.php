@@ -22,6 +22,8 @@ $id = $_SESSION['user_id'];
         require_once('models/user.php');
         $user = new User($db);
         
+        
+        
         //Add a biography
         if ($_POST['task'] == 'biography') {
             $success = $user->bio($id,  $_POST['biography']);
