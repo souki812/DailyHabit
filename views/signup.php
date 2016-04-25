@@ -18,8 +18,21 @@
                  background-size: cover;
                  height: 200px;
             }
+            .circleBase {
+                border-radius: 50%;
+                behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            }
+
+            .type1 {
+                margin-left: 50px
+                width: 200px;
+                height: 200px;
+                background: url("views/images/manon.jpg");
+                border: 3px solid #000;
+            }
             
             
+          
             #firstRow{
                 margin-top:100px;
                 text-align: center;
@@ -86,11 +99,8 @@
                 border-top: 86.60px solid #64C7CC;
             }
 
-            .manon {
-                width: 200px;
-                height: 100px;
-                border: 3px solid #73AD21;
-            }
+       
+ 
          
            
         </style>
@@ -256,8 +266,8 @@
         
         <div class="col-md-4" text-align="center">
           <div class="hexagon">
-            <img class="img-circle" src="../views/images"> 
-                <br><h4><center>Manon Edeline</center></h4>
+           <div class="circleBase type1"><img class="img-circle" ></div>  
+              <br><h4><center>Manon Edeline</center></h4>
             "Thanks to DailyHabit, I am finally able to keep <br>track of all of my goals
             and the progress I make.  I have managed to continue to work out an hour
             a day for five days a week and am starting to see results!"<br><br>
