@@ -11,13 +11,15 @@
             
 $("#target").click(function() {
    
-    var val = 20;
+    var val = 0;
     $.ajax({
         type: 'POST',
-        url: 'home.php',
+        url: 'progress.php',
         data: { val:val },
         success: function(response) {
-           console.log(response);
+           val = response;
+           console.log(val);
+           
        
         }
     });

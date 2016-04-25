@@ -43,22 +43,18 @@
             </div>
            
             
-            <form method="post" action="home.php">
+           
                 <div class="form-group">
-                    
-    
-                    
-                    
+                   
                     <label >Have you achieved today's Habit?</label>
-                     <input type="hidden" name="task" value="progress">
+  
                      <button class="btn btn-success firstbutton" id="target" type="button">Achieved</button>
-                    <div id="output"></div>
+                    
 
-                   <button  class="btn btn-success secondbutton" >Edit Goal</button>
-                    <input type="text" class="form-control comment" value="Leave a comment.."/>
+                
                 
                 </div>
-            </form>
+         
         </div>
     </div><br>
     
@@ -68,12 +64,19 @@
    <div class="container">
   <h2>Your Progress:</h2>
   <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
+   <?php foreach ($progress as $row): ?>
+   <p><?php echo htmlentities($row['progress'], ENT_QUOTES, 'utf-8'); ?></p>
    <div class="progress progress-striped active">
          
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+
+        <div class="progress-bar" role="progressbar" id="progress" aria-valuenow="<?php echo htmlentities($row['progress'], ENT_QUOTES, 'utf-8'); ?>" aria-valuemin="0" aria-valuemax="100">
+        
+
         </div>
+         
     
     </div>
+    <?php endforeach; ?>
 </div>
    
    
