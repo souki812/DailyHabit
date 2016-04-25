@@ -28,7 +28,7 @@ if (isset($_POST['task'])) {
     
          //Add a comment 
         if ($_POST['task'] == 'newsfeed') {
-            $success = $user->newsfeed(  $_POST['newsfeed'], $id);
+            $success = $user->newsfeed( $_POST['newsfeed'], $id);
             
         }
           
