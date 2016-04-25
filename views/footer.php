@@ -4,26 +4,39 @@
                 
       <script>
       $(document).ready(function() {
-
-
-
-            
-            
-$("#target").click(function() {
-   
-    var val = 0;
+      var val =0;
+      var last = "$_POST['val']";
     $.ajax({
         type: 'POST',
         url: 'progress.php',
         data: { val:val },
         success: function(response) {
            val = response;
-           console.log(val);
            
+            $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
        
         }
     });
+
+            
+            
+$("#target").click(function() {
+ 
+    $.ajax({
+        type: 'POST',
+        url: 'progress.php',
+        data: { val:val },
+        success: function(response) {
+            
+           val = response;
+           console.log(last);
+            $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+       
+        }
+    });
+   
 });
+
       });
       </script>
       
