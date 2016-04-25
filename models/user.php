@@ -34,6 +34,12 @@ class User {
 		return $insert->execute();
 	}
 	
+	function remove_comment($comment_id){
+		$delete = $this->db->prepare('delete from newsfeed where comment_id= :comment_id');
+		$delete->bindParam(':comment_id', $comment_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
+	
 	
 	function bio($id, $biography){
 		

@@ -23,7 +23,7 @@ $id = $_SESSION['user_id'];
         $user = new User($db);
         
         
-        
+         if (isset($_POST['task'])) {
         //Add a biography
         if ($_POST['task'] == 'biography') {
             $success = $user->bio($id,  $_POST['biography']);
@@ -31,13 +31,16 @@ $id = $_SESSION['user_id'];
         }
         
         //Add a comment
-        
-        if (isset($_POST['task'])) {
         if ($_POST['task'] == 'newsfeed') {
             $success = $user->newsfeed( $_POST['newsfeed'], $id);
-        }   
         }
- 
+    
+        }
+        
+        if (isset($_POST['comment_id'])) {
+        //Remove comment
+         $success= $user->remove_comment( $_POST['comment_id']);
+        }
     }
 $selection = $db->query("select * from users where user_id=$id");
 $comments =  $db->query("select * from newsfeed where user_id=$id ORDER BY time DESC");

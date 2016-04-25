@@ -104,7 +104,11 @@
                     <input type="hidden" name="task" value="newsfeed">
                      <button type="submit" class="btn btn-success">Add</button>
                 </form>
+                 
+                 
+              
                 </form>
+                 
             </div>
             
         </div>
@@ -153,18 +157,37 @@
 </div> 
 </div>
 
-<div class="container page" id="firstContainer">
+
+
+<div class="container page">
  <div class="row">
-         <?php foreach ($comments as $row): ?>
+ 
+   <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-2  comment" >
+            <form action="activity.php" method="post" >
             <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+            
+            
+            
+           <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
+           <input type="submit" name="delete" value="delete">
+             </form>
         </div>
             <?php endforeach; ?>
-       
-        
-  </div>
+
  </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
 </div>
   
   
