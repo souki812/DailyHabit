@@ -55,6 +55,39 @@
              .margintop1{
                 margin-top:150px;
             }
+            
+          .hexagon {
+            position: relative;
+            width: 300px; 
+            height: 173.21px;
+            background-color: #64C7CC;
+            margin: 86.60px 0;
+            
+            }
+
+            .hexagon:before,
+                .hexagon:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                border-left: 150px solid transparent;
+                border-right: 150px solid transparent;
+                
+            }
+
+            .hexagon:before {
+                bottom: 100%;
+                border-bottom: 86.60px solid #64C7CC;
+            }
+
+            .hexagon:after {
+                top: 100%;
+                width: 0;
+                border-top: 86.60px solid #64C7CC;
+            }
+            
+            
+         
            
         </style>
     </head>
@@ -194,30 +227,37 @@
   <div class="container PageContainer" id="thirdcontainer">
     <div class="row margintop">
         <h1 class="center centertext large">Testimonials</h1>
-        <div class="col-md-4 margintop1">
-            <h2><span class="glyphicon glyphicon-check"></span> Quick & Easy</h2>
+        <div class="col-md-4">
+            <div class="hexagon">
+                <h4>Coral</h4>
             DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
+            </div>
+            
+          
+        </div>
+        
+        <div class="col-md-4">
+            <div class="hexagon">
+                <h4>Sabrina Walton</h4>
+            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
+            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
+            DailyHabit is an excellent way to keep you in check and on track.<br><br>
+        
+            </div>
         
         </div>
         
-        <div class="col-md-4 margintop1">
-            <h2><span class="glyphicon glyphicon-off"></span> Long-term Progress</h2>
+        <div class="col-md-4">
+          <div class="hexagon">
+                <h4>Manon Edeline</h4>
             DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
         
-        
-        </div>
-        
-        <div class="col-md-4 margintop1">
-            <h2><span class="glyphicon glyphicon-globe"></span> Share With Friends</h2>
-            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
-            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
-            DailyHabit is an excellent way to keep you in check and on track.<br><br>
-        
+          </div>
           
         </div>
     </div>
