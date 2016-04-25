@@ -85,8 +85,12 @@
                 width: 0;
                 border-top: 86.60px solid #64C7CC;
             }
-            
-            
+
+            .manon {
+                width: 200px;
+                height: 100px;
+                border: 3px solid #73AD21;
+            }
          
            
         </style>
@@ -229,7 +233,7 @@
         <h1 class="center centertext large">Testimonials</h1>
         <div class="col-md-4">
             <div class="hexagon">
-                <h4>Coral</h4>
+                <br><h4><center>Coral</center></h4>
             DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
@@ -241,7 +245,7 @@
         
         <div class="col-md-4">
             <div class="hexagon">
-                <h4>Sabrina Walton</h4>
+                <br><h4><center>Sabrina Walton</center></h4>
             DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
             it's just a couple of clicks and you're done! If you're serious about your long-term goals,
             DailyHabit is an excellent way to keep you in check and on track.<br><br>
@@ -250,12 +254,13 @@
         
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4" text-align="center">
           <div class="hexagon">
-                <h4>Manon Edeline</h4>
-            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
-            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
-            DailyHabit is an excellent way to keep you in check and on track.<br><br>
+            <img class="img-circle" src="../views/images"> 
+                <br><h4><center>Manon Edeline</center></h4>
+            "Thanks to DailyHabit, I am finally able to keep <br>track of all of my goals
+            and the progress I make.  I have managed to continue to work out an hour
+            a day for five days a week and am starting to see results!"<br><br>
         
           </div>
           
