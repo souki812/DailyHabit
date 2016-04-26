@@ -5,7 +5,7 @@
       <script>
       $(document).ready(function() {
       var val =0;
-      var last = "$_POST['val']";
+      
     $.ajax({
         type: 'POST',
         url: 'progress.php',
@@ -29,7 +29,7 @@ $("#target").click(function() {
         success: function(response) {
             
            val = response;
-           console.log(last);
+           console.log(val);
             $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
        
         }
@@ -39,9 +39,6 @@ $("#target").click(function() {
 
       });
       </script>
-      
-      
-   
-  
+     
     </body>
 </html>

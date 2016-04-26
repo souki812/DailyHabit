@@ -31,8 +31,13 @@ if (isset($_POST['task'])) {
             $success = $user->newsfeed( $_POST['newsfeed'], $id);
             
         }
+       
           
     }
+      if (isset($_POST['comment_id'])) {
+        //Remove comment
+         $success= $user->remove_comment( $_POST['comment_id']);
+        }
 
 
     

@@ -11,16 +11,22 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$id = $_SESSION['user_id'];
-$val = $_POST['val'];
+require_once('models/user.php');
+$user = new User($db);
+      
+$id = $_SESSION['user_id'];      
+$value = $user->getprogress( $id);
+
+
+$val = $_POST['val'] + $value;
 
 
  if (!isset($db)) {
        exit();
     }else{
      
-      require_once('models/user.php');
-      $user = new User($db);
+ 
+      
       $val = $val + 5;
       $success = $user->progress( $val, $id);
       echo $success;

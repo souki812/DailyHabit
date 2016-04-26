@@ -81,7 +81,14 @@ class User {
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
-    
+	
+	 function getprogress($id) {
+        $select = $this->db->prepare('select progress from users where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+		$row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['progress'];
+	 }
     // Attempt to return the ID of this user
     function login($email, $password) {
         $select = $this->db->prepare('select * from users where email=:email');
