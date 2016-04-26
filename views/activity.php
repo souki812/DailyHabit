@@ -64,16 +64,8 @@
             <input type ="file" id="input-file-upload" style="display:none">
         </div>
         <div id="server-response"></div>
-        
-        
-        
-        
-        
-        
-        
+  
         </div>
-        
-
         <!--right container-->
         <div class="col-lg-6">
             <?php foreach ($selection as $row): ?>
@@ -157,7 +149,17 @@
 </div> 
 </div>
 
+<div class="container">
+  <h2>Your Progress:</h2>
+  <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
+  
+   <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+  </div>
+</div>
 
+    </div>
 
 <div class="container page">
  <div class="row">
