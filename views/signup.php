@@ -18,19 +18,6 @@
                  background-size: cover;
                  height: 200px;
             }
-            .circleBase {
-                border-radius: 50%;
-                behavior: url(PIE.htc); /* remove if you don't care about IE8 */
-            }
-
-            .type1 {
-                margin-left: 50px
-                width: 200px;
-                height: 200px;
-                background: url("views/images/manon.jpg");
-                border: 3px solid #000;
-            }
-            
             
           
             #firstRow{
@@ -49,7 +36,7 @@
             }
             
             #thirdcontainer{
-                background-color: #A0A0A0;
+                background-color: #ffb3b3;
                 width: 100%;
               
             }
@@ -73,9 +60,8 @@
             position: relative;
             width: 300px; 
             height: 173.21px;
-            background-color: #64C7CC;
+            background-color: #ffe6f9;
             margin: 86.60px 0;
-            
             }
 
             .hexagon:before,
@@ -84,22 +70,35 @@
                 position: absolute;
                 width: 0;
                 border-left: 150px solid transparent;
-                border-right: 150px solid transparent;
-                
+                border-right: 150px solid transparent;  
             }
 
-            .hexagon:before {
+            /* Top triangle */
+            .hexagon:before type1{      /* Get rid of type1 for top of hexagon */
                 bottom: 100%;
-                border-bottom: 86.60px solid #64C7CC;
+                border-bottom: 86.60px solid #ffe6f9;  
             }
 
             .hexagon:after {
                 top: 100%;
                 width: 0;
-                border-top: 86.60px solid #64C7CC;
+                border-top: 86.60px solid #ffe6f9;
             }
 
-       
+            .circleBase {
+                border-radius: 50%;
+                behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            }
+
+            .type1 {
+                /*background: url("views/images/manon.jpg");*/
+                margin-left: 100px;
+                margin-top: -50px;
+                border-radius: 50%/50%; 
+                width: 100px;
+                height: 100px;
+                border: 3px solid #000;
+            }
  
          
            
@@ -241,24 +240,25 @@
   <div class="container PageContainer" id="thirdcontainer">
     <div class="row margintop">
         <h1 class="center centertext large">Testimonials</h1>
-        <div class="col-md-4">
+        <div class="col-md-4" text-align="center">
             <div class="hexagon">
-                <br><h4><center>Coral</center></h4>
-            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
-            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
-            DailyHabit is an excellent way to keep you in check and on track.<br><br>
+              <div><img class="circleBase type1" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAT2AAAAJDZhNWRjYmY1LTYyZGMtNGYyNi1hNzJkLWVkNDU5NzM2NzU5Mw.jpg"></div>  
+                <h4><center>Coral Peral Garcia</center></h4>
+             <center>"I've been using the DailyHabit website for months it has really
+             helped me to form good habits. If you have a hard time keeping your habits on track,
+             this is the website to use."</center><br><br>
         
             </div>
             
           
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4" text-align="center">
             <div class="hexagon">
-                <br><h4><center>Sabrina Walton</center></h4>
-            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
-            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
-            DailyHabit is an excellent way to keep you in check and on track.<br><br>
+              <div><img class="circleBase type1" src="https://pbs.twimg.com/profile_images/2145570159/Photo_on_4-17-12_at_1.30_PM__3_400x400.jpg"></div>  
+                <h4><center>Sabrina Walton</center></h4>
+            <center>"The progress bar really motivates you to strive to achieve all your habits.
+              It also allows you to keep track of how far you have come."</center><br><br>
         
             </div>
         
@@ -266,11 +266,10 @@
         
         <div class="col-md-4" text-align="center">
           <div class="hexagon">
-           <div class="circleBase type1"><img class="img-circle" ></div>  
-              <br><h4><center>Manon Edeline</center></h4>
-            "Thanks to DailyHabit, I am finally able to keep <br>track of all of my goals
-            and the progress I make.  I have managed to continue to work out an hour
-            a day for five days a week and am starting to see results!"<br><br>
+           <div><img class="circleBase type1" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAJoAAAAJDY3M2ViMWYyLTMyOTctNGZkYy1iMTRjLThkNzMyM2MxNWMyOQ.jpg"></div>  
+              <h4><center>Manon Edeline</center></h4>
+              <center>"I love that DailyHabit lets you interact with like-minded people
+              to discuss your achievments.  The best part is, it's free!"</center><br><br>
         
           </div>
           
