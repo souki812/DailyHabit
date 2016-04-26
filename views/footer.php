@@ -24,7 +24,7 @@ $("#target").click(function() {
  
     $.ajax({
         type: 'POST',
-        url: 'progress.php',
+        url: 'getprogress.php',
         data: { val:val },
         success: function(response) {
             

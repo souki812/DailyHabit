@@ -15,10 +15,7 @@ require_once('models/user.php');
 $user = new User($db);
       
 $id = $_SESSION['user_id'];      
-$value = $user->getprogress( $id);
-
-
-$val = $_POST['val'] + $value;
+$val = $_POST['val'] ;
 
 
  if (!isset($db)) {
@@ -27,7 +24,7 @@ $val = $_POST['val'] + $value;
      
  
       
-    
+      $val = $val + 5;
       $success = $user->progress( $val, $id);
       echo $success;
         
