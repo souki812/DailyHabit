@@ -31,19 +31,22 @@ create table newsfeed (
 create table current(
 	current VARCHAR(255),
 	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	user_id INT NOT NULL
+	user_id INT NOT NULL,
+	current_id INT AUTO_INCREMENT PRIMARY KEY 
 );
 
 create table future(
 	future VARCHAR(255),
 	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	user_id INT NOT NULL
+	user_id INT NOT NULL,
+	future_id INT AUTO_INCREMENT PRIMARY KEY 
 );
 
 create table achieved(
 	achieved VARCHAR(255),
 	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	user_id INT NOT NULL
+	user_id INT NOT NULL,
+	achieved_id INT AUTO_INCREMENT PRIMARY KEY 
 );
 
 

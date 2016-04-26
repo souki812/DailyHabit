@@ -45,9 +45,14 @@
    <div class="col-md-6 col-md-offset-3  comment" >
     <h4>Current Goal:</h4>
   <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
+   <form action="goals.php" method="post">
  <?php foreach ($current as $row): ?>
   <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
+    <input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
+   <input type="submit" name="delete" value="delete">
+             
    <?php endforeach; ?>
+   </form>
     </div>
    </div>
  
@@ -87,9 +92,14 @@
    <div class="col-md-6 col-md-offset-3  comment" >
     <h4>Achieved Goals:</h4>
   <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
+  <form action="goals.php" method="post">
  <?php foreach ($achieved as $row): ?>
   <h4> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
+   <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
+   <input type="submit" name="delete" value="delete">
+             
    <?php endforeach; ?>
+   </form>
     </div>
    </div>
  
@@ -128,9 +138,14 @@
    <div class="col-md-6 col-md-offset-3  comment" >
     <h4>Future Goals:</h4>
   <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
+   <form action="goals.php" method="post" >
  <?php foreach ($future as $row): ?>
   <h4> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
+  
+   <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
+   <input type="submit" name="delete" value="delete">
    <?php endforeach; ?>
+   </form>
     </div>
    </div>
  

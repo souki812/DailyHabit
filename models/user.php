@@ -65,6 +65,12 @@ class User {
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
+	
+	function remove_current($current_id){
+		$delete = $this->db->prepare('delete from current where current_id= :current_id');
+		$delete->bindParam(':current_id', $current_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
 		
 	function achieved($achieved, $id){
 		
@@ -73,6 +79,12 @@ class User {
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
+	
+	function remove_achieved($achieved_id){
+		$delete = $this->db->prepare('delete from achieved where achieved_id= :achieved_id');
+		$delete->bindParam(':achieved_id', $achieved_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
 		
 	function future($future, $id){
 		
@@ -80,6 +92,12 @@ class User {
         $insert->bindParam(':future', $future, PDO::PARAM_STR);
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
+	}
+	
+	function remove_future($future_id){
+		$delete = $this->db->prepare('delete from future where future_id= :future_id');
+		$delete->bindParam(':future_id', $future_id, PDO::PARAM_INT);
+		$delete->execute();
 	}
 	
 	 function getprogress($id) {

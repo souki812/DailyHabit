@@ -40,6 +40,19 @@ if (isset($_POST['task'])) {
             
         }
     }
+    
+     if (isset($_POST['current_id'])) {
+        //Remove comment
+         $success= $user->remove_current( $_POST['current_id']);
+        }
+         if (isset($_POST['future_id'])) {
+        //Remove comment
+         $success= $user->remove_future( $_POST['future_id']);
+        }
+         if (isset($_POST['achieved_id'])) {
+        //Remove comment
+         $success= $user->remove_achieved( $_POST['achieved_id']);
+        }
 
 }
     
