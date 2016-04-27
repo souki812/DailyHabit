@@ -29,9 +29,9 @@ $("#target").click(function() {
         success: function(response) {
             
            val = response;
-           console.log(val);
+         
             $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
-       
+            
         }
     });
    
