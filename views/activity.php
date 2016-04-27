@@ -39,7 +39,7 @@
 </style>
  
 
-<div class="container page">
+<div class="container page" id="firstContainer">
  <div class="row">
         
         <div class="col-md-6 col-md-offset-2  profile" >
@@ -47,8 +47,15 @@
                  <h4>Profile</h4>
             </div>
 
-    
-        </div>
+          <!-- The data encoding type, enctype, MUST be specified as below -->
+<form enctype="multipart/form-data" action="activity.php" method="POST">
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- Name of input element determines name in $_FILES array -->
+    Upload file: <input name="userfile" type="file" />
+    <input type="submit" value="Send File" />
+</form>
+
         <!--right container-->
         <div class="col-lg-6">
             <?php foreach ($selection as $row): ?>
@@ -60,8 +67,8 @@
             <p><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
         </div>
-        </div>   
- </div>
+       
+
 
 <div class="modal" id="modal2">
     
@@ -123,8 +130,14 @@
     
 </div>
 
-</div>
+        
+         </div>
+    
+    
+        
 
+</div> 
+</div>
 
 <div class="container">
   <h2>Your Progress:</h2>
@@ -167,6 +180,6 @@
 
 
 
-
+</div>
   
   
