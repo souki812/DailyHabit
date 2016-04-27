@@ -54,7 +54,11 @@
             </figure>
             </aside>
 </div>
-
+<form action="uploadimage.php" method="post" enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input type="submit" name="submit" value="Submit">
+</form>
         <!--right container-->
         <div class="col-lg-6">
             <?php foreach ($selection as $row): ?>
