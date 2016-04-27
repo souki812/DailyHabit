@@ -39,7 +39,7 @@
 </style>
  
 
-<div class="container page" id="firstContainer">
+<div class="container page">
  <div class="row">
         
         <div class="col-md-6 col-md-offset-2  profile" >
@@ -47,24 +47,7 @@
                  <h4>Profile</h4>
             </div>
 
-        <!--left container-->
-        <div class="col-sm-5">
-             <aside>
-            <figure>
-                <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png">  
-            </figure>
-            </aside>
-             
-        <div class="upload-wrapper">
-            <div class="upload-click">
-            <button> Upload Image</button>   
-            </div>
-            <div class="upload-image" style="display:none">
-            </div>
-            <input type ="file" id="input-file-upload" style="display:none">
-        </div>
-        <div id="server-response"></div>
-  
+    
         </div>
         <!--right container-->
         <div class="col-lg-6">
@@ -77,8 +60,8 @@
             <p><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
         </div>
-       
-
+        </div>   
+ </div>
 
 <div class="modal" id="modal2">
     
@@ -140,14 +123,8 @@
     
 </div>
 
-        
-         </div>
-    
-    
-        
-
-</div> 
 </div>
+
 
 <div class="container">
   <h2>Your Progress:</h2>
@@ -190,6 +167,6 @@
 
 
 
-</div>
+
   
   
