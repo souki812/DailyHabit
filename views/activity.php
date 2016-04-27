@@ -36,6 +36,17 @@
         margin-right: 20px;
         margin-bottom: 20px;
     }
+    
+    #profile-pic{
+         width:150px; /* you can use % */
+         height: 150px;
+    }
+    
+    .col-xs-6 img[src=""] {
+    display: none;
+}
+    
+
 </style>
  
 
@@ -43,24 +54,29 @@
  <div class="row">
         
         <div class="col-md-6 col-md-offset-2  profile" >
-            <div>
+           <div class="col-xs-6">
                  <h4>Profile</h4>
-            </div>
-
-<div class="col-sm-5">
+   
+    <?php foreach ($uploadimage as $row): ?>
              <aside>
             <figure>
-                <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png">  
+               
+                <img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic"   onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+             
             </figure>
             </aside>
-</div>
-<form action="uploadimage.php" method="post" enctype="multipart/form-data">
-<label for="file">Filename:</label>
-<input type="file" name="file" id="file"><br>
-<input type="submit" name="submit" value="Submit">
-</form>
+             <?php endforeach; ?>
+    
+            <form action="activity.php" method="post" enctype="multipart/form-data">
+            <label for="file">Filename:</label>
+            <input type="file" name="file" id="file"><br>
+            <input type="submit" name="profile" value="Upload">
+            </form>    
+        </div>
+
+
         <!--right container-->
-        <div class="col-lg-6">
+        <div class="col-xs-6">
             <?php foreach ($selection as $row): ?>
             <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
             <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p><br>
@@ -69,8 +85,14 @@
             <label>About me:</label>
             <p><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
             <?php endforeach; ?>
+            
+            
+<button  class="btn btn-success secondbutton"  data-toggle="modal" data-target="#modal1" >Add Biography</button>
+<button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
         </div>
-       
+        </div>
+ </div>
+    
 
 
 <div class="modal" id="modal2">
@@ -106,8 +128,6 @@
 
 
 
-<button  class="btn btn-success firstbutton"  data-toggle="modal" data-target="#modal1" >Add Biography</button>
-<button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
 
 <div class="modal" id="modal1">
     
@@ -148,7 +168,7 @@
   
    <div class="progress">
   <div class="progress-bar progress-bar-striped active" role="progressbar"
-  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%" id="progress1">Progress
   </div>
 </div>
 

@@ -120,4 +120,17 @@ class User {
             return NULL;
         }
     }
+	
+	function picture($file, $id){
+		$insert = $this->db->prepare("UPDATE users SET picture=:picture WHERE user_id=$id");
+        $insert->bindParam(':picture', $file, PDO::PARAM_STR);
+		return $insert->execute();
+	}
+	
+	
+	
+	
+	
+	
+	
 }

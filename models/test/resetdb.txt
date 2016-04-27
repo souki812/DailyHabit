@@ -12,6 +12,7 @@ create table users (
     age INT NOT NULL,
 	biography VARCHAR(255),
 	progress INT NOT NULL,
+	picture  VARCHAR(255),
 	user_id INT AUTO_INCREMENT PRIMARY KEY
 );
 alter table users add UNIQUE KEY(email);

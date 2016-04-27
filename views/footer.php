@@ -31,7 +31,7 @@ $("#target").click(function() {
            val = response;
          
             $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
-            
+             $("#progress1").html(response);
         }
     });
    
