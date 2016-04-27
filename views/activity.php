@@ -47,14 +47,13 @@
                  <h4>Profile</h4>
             </div>
 
-          <!-- The data encoding type, enctype, MUST be specified as below -->
-<form enctype="multipart/form-data" action="activity.php" method="POST">
-    <!-- MAX_FILE_SIZE must precede the file input field -->
-    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-    <!-- Name of input element determines name in $_FILES array -->
-    Upload file: <input name="userfile" type="file" />
-    <input type="submit" value="Send File" />
-</form>
+<div class="col-sm-5">
+             <aside>
+            <figure>
+                <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png">  
+            </figure>
+            </aside>
+</div>
 
         <!--right container-->
         <div class="col-lg-6">
