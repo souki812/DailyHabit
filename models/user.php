@@ -108,13 +108,11 @@ class User {
 		return $row['progress'];
 	 }
 	 
-	  function checkemailduplicates($email) {
-         $select = $this->db->prepare('select * from users where email=:email');
-        $select->bindParam(':email', $email, PDO::PARAM_STR);
-        $select->execute();
-		$row = $select->fetch(PDO::FETCH_ASSOC);
-		return $row['email'];
-	 }
+	 // Attempt to return the ID of this user
+    function selectAll($id) {
+       return $this->db->query("select * from users where user_id= '$id' ");
+		
+	}
     // Attempt to return the ID of this user
     function login($email, $password) {
         $select = $this->db->prepare('select * from users where email=:email');

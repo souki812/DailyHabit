@@ -58,6 +58,7 @@
             </style>
            <h2><span class="glyphicon glyphicon-user top"></span> Community</h2><br>
               <?php foreach ($selection as $row): ?>
+              <form action="friend.php" method="get">
             <div class="container">
             
             
@@ -72,22 +73,17 @@
                         </a>
                         <div class="media-body"><br>
                             <h4>Name: </h4>
-                           
                             <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?>
-                           
-                           
                         </div>
-                        
-                        
+                         <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                         <input type="submit" name="friend" value="View Profile">
                     </div>  
                     </div>
                 </div>
             </div>
-                    
-               
-         
-                </div>
-             <?php endforeach; ?>
+        </div>
+    </form>
+    <?php endforeach; ?>
 <!------------------------------------------------------------>
 
 
