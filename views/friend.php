@@ -90,14 +90,49 @@
  
    <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-2  comment" >
-            <form action="activity.php" method="post" >
+           
             <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
-             </form>
+          
+            
+            <div class="button2"><button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal5" >Add a comment</button></div>   
         </div>
             <?php endforeach; ?>
             
  </div>
+</div>
+
+
+ 
+
+<div class="modal" id="modal5">
+    
+    <div class="modal-dialog">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <form action="friend.php" method="post" class="well">
+                 <form class="form">
+                    <label >Comment</label>
+                    
+                    <textarea class="form-control" rows="5" id="comment"   name="friendcomment" autocomplete="off" autofocus>
+                       
+                    </textarea>
+                    <?php if(isset($_SESSION['friend'])): ?>
+                    <input type="hidden" name="task" value="<?php echo $_SESSION['friend']; unset($_SESSION['friend']);?>">
+                     <button type="submit" class="btn btn-success">Add</button>
+                     <?php endif; ?>
+                </form>
+                 
+                 
+              
+                </form>
+                 
+            </div>
+            
+        </div>
+    </div>
+    
 </div>
   
   

@@ -34,6 +34,14 @@ class User {
 		return $insert->execute();
 	}
 	
+	function comment_friend($comment, $user_id, $friend_id){
+		$insert = $this->db->prepare("insert into newsfeed(comment,user_id,friend_id) values(:comment,:user_id,:friend_id)");
+        $insert->bindParam(':comment', $comment, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		$insert->bindParam(':friend_id', $friend_id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+	
 	function remove_comment($comment_id){
 		$delete = $this->db->prepare('delete from newsfeed where comment_id= :comment_id');
 		$delete->bindParam(':comment_id', $comment_id, PDO::PARAM_INT);
@@ -116,7 +124,12 @@ class User {
 	
 	 // Attempt to return the ID of this user
     function selectComments($id) {
-       return $this->db->query("select * from newsfeed where user_id= '$id' ORDER BY time DESC");
+       return $this->db->query("select * from newsfeed where user_id= '$id' ORDER BY time ASC");
+		
+	}
+	
+	 function selectFriendComments($user_id, $friend_id) {
+       return $this->db->query("select * from newsfeed where user_id= '$user_id' AND friend_id= '$friend_id' ORDER BY time ASC");
 		
 	}
     // Attempt to return the ID of this user
