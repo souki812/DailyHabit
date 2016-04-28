@@ -11,19 +11,21 @@
                 font-size:2em;  
             }
             
+            .error {
+                margin-left: 600px;
+                color: red;
+            }
             
             #firstContainer{
                  background: url("views/images/goals.jpg");
                  width: 100%;
                  background-size: cover;
                  height: 200px;
-            }
-            
+            }    
           
             #firstRow{
                 margin-top:100px;
                 text-align: center;
-             
             }
             
             .large{
@@ -38,13 +40,11 @@
             #thirdcontainer{
                 background-color: #ffb3b3;
                 width: 100%;
-              
             }
             
             #secondcontainer{
-                background-color: #99CCFF;
+                background-color: white;
                 width: 100%;
-               
             }
             
             
@@ -137,6 +137,20 @@
                 </form>
                 </div>
                 
+                
+                
+                
+                <?php if(isset($_SESSION['message'])): ?>
+                    <div class="row">
+                        <p class="text-info text-center error"><?php echo $_SESSION['message']; unset($_SESSION['message']);?></p> <!--when you click login without fillin out boxes -->
+                    </div>
+                <?php endif; ?>
+            </div>
+                
+                
+                
+                
+                
             </div>
         </div>
 
@@ -191,19 +205,12 @@
   </div>
 
 
-  <?php if(isset($_SESSION['message'])): ?>
-            <div class="row">
-                <p class="text-info text-center"><?php echo $_SESSION['message']; unset($_SESSION['message']);?></p> <!--when you click login without fillin out boxes -->
-                </div>
-<?php endif; ?>
-            </div>
   
   <div class="container PageContainer" id="secondcontainer">
     
     <div class="row margintop" class="centertext">
-        <h1 class="centertext">Why Choose DailyHabit?</h1>
-        <p class="lead centertext"></p>
-        
+            <h1 class="centertext">Why Choose DailyHabit?</h1>
+            <p class="lead centertext"></p>
         
           <div class="col-md-4 margintop1">
             <h2><span class="glyphicon glyphicon-check"></span> Quick & Easy</h2>

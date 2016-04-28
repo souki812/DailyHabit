@@ -49,12 +49,11 @@
         color: white;
     }
     
-    
     .secondbutton:hover {
         border: #555555;
         background-color: #555555;
         color: white;
-}
+    }
     
     
     #profile-pic{
@@ -107,7 +106,6 @@
     }
     
     .bio {
-        
         border-top: solid 1px;
         border-bottom: solid 1px; 
     }
