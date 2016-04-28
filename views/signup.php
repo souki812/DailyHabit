@@ -216,18 +216,18 @@
         
         <div class="col-md-4 margintop1">
             <h2><span class="glyphicon glyphicon-off"></span> Long-term Progress</h2>
-            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
-            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
-            DailyHabit is an excellent way to keep you in check and on track.<br><br>
+            You'll be able to keep track of your current, achieved, and future goals to stay
+            right on track.  Every time you have achieved your goal, the progress bar will go
+            up making it easy for you to see how far you've come and help keep you motivated!<br><br>
         
       
         </div>
         
         <div class="col-md-4 margintop1">
             <h2><span class="glyphicon glyphicon-globe"></span> Share With Friends</h2>
-            DailyHabit is not time consuming nor difficult to use... It's very easy! After a few days,
-            it's just a couple of clicks and you're done! If you're serious about your long-term goals,
-            DailyHabit is an excellent way to keep you in check and on track.<br><br>
+            DailyHabit allows you to interact with other users and share your habits with each other.
+            See what habits other people are trying to achieve and help encourage them to reach their
+            goal.<br><br>
         
           
         </div>

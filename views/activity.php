@@ -40,11 +40,13 @@
     #profile-pic{
          width:150px; /* you can use % */
          height: 150px;
+         border: 2px solid grey;
     }
     
     .col-xs-6 img[src=""] {
-    display: none;
-}
+        display: none;
+    }
+    
     
 
 </style>
@@ -78,12 +80,12 @@
         <!--right container-->
         <div class="col-xs-6">
             <?php foreach ($selection as $row): ?>
-            <p><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></p><br>
-            <p><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></p><br>
-            <p><?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></p><br>
-            <p><?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></p>
+            <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></h4><br>
+            <h4><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4><br>
+            <h5><?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></h5><br>
+            <h5><?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></h5>
             <label>About me:</label>
-            <p><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></p>
+            <h5><?php echo htmlentities($row['biography'], ENT_QUOTES, 'utf-8'); ?></h5>
             <?php endforeach; ?>
             
             

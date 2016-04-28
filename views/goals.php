@@ -43,7 +43,7 @@
      <div class="container page" >
  <div class="row">
    <div class="col-md-6 col-md-offset-3  comment" >
-    <h4>Current Goal:</h4>
+    <h4><span class="glyphicon glyphicon-road"></span> Current Goal:</h4>
   <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
    <form action="goals.php" method="post">
  <?php foreach ($current as $row): ?>
@@ -90,7 +90,7 @@
       <div class="container page" >
  <div class="row">
    <div class="col-md-6 col-md-offset-3  comment" >
-    <h4>Achieved Goals:</h4>
+    <h4><span class="glyphicon glyphicon-thumbs-up"></span> Achieved Goals:</h4>
   <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
   <form action="goals.php" method="post">
  <?php foreach ($achieved as $row): ?>
@@ -136,7 +136,7 @@
        <div class="container page" >
  <div class="row">
    <div class="col-md-6 col-md-offset-3  comment" >
-    <h4>Future Goals:</h4>
+    <h4><span class="glyphicon glyphicon-pushpin"></span> Future Goals:</h4>
   <button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
    <form action="goals.php" method="post" >
  <?php foreach ($future as $row): ?>
