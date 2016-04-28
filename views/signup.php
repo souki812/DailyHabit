@@ -154,30 +154,30 @@
         
         <div class="col-md-6 margintop1">
             <h3>Sign Up Today!</h3>
-                    <form action="authenticate.php" method="post" class="well">
+                    <form action="authenticate.php" method="post" class="well" id="signup1">
             
-                        <div class="form-group">
-                        <input type="text" class="form-control" name="first" placeholder="Enter First Name">
+                        <div class="form-group" id="first">
+                        <input type="text" class="form-control" name="first"  placeholder="Enter First Name">
                         </div>
-                        <div class="form-group">
-                        <input type="text" class="form-control" name="last" placeholder="Enter Last Name">
-                        </div>
-                        
-                        <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                        <div class="form-group" id="last">
+                        <input type="text" class="form-control" name="last"  placeholder="Enter Last Name">
                         </div>
                         
-                        <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                        <div class="form-group" id="email">
+                        <input type="email" class="form-control" name="email"  placeholder="Enter Email">
                         </div>
                         
-                        <div class="form-group">
-                        <input type="text" class="form-control" name="gender" placeholder="Enter Gender">
+                        <div class="form-group" id="password">
+                        <input type="password" class="form-control" name="password"  placeholder="Enter Password">
+                        </div>
+                        
+                        <div class="form-group" id="gender">
+                        <input type="text" class="form-control" name="gender"  placeholder="Enter Gender">
                         </div>
                         
                         
-                        <div class="form-group">
-                        <input type="text" class="form-control" name="age" placeholder="Enter Age">
+                        <div class="form-group" id="age">
+                        <input type="text" class="form-control" name="age"  placeholder="Enter Age">
                         </div>
                         
                          <input type="hidden" name="task" value="register">
@@ -287,7 +287,91 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         
         <script>
-            $(".PageContainer").css("min-height", $(window).height()); //set picture to windows height
+           
+            
+            $(document).ready(function() {
+        
+        
+         $(".PageContainer").css("min-height", $(window).height()); //set picture to windows height
+         
+         
+        // Don't submit the form if there are input errors
+        $('#signup1 button').on('click', function(event) {
+          if (!validate()) {
+            console.log("WTF");
+            event.preventDefault();
+          }
+        });
+        
+        // Return whether signup form inputs look right
+        function validate() {
+          
+          // Get the input values
+          var first = $('#first input').val();
+          console.log(first);
+          var last = $('#last input').val();
+          var gender = $('#gender input').val();
+          var age = $('#age input').val();
+          var email = $('#email input').val();
+          var password = $('#password input').val();
+          
+          
+          // Clear any previous error reports
+          $('.form-group').removeClass('has-error');
+          $('.help-block').remove();
+           // Report an empty password
+          if (!first) {
+            $('#first').append('<span class="help-block">First name required</span>');
+            $('#first').addClass('has-error');
+            $('#first input').focus();
+            return false;
+          }
+          
+          // Report an empty password
+          if (!last) {
+            $('#last').append('<span class="help-block">Last name required</span>');
+            $('#last').addClass('has-error');
+            $('#last input').focus();
+            return false;
+          }
+          // Report an email that can't be a SLU student email
+          if (!email) {
+            $('#email').append('<span class="help-block">Email required</span>');
+            $('#email').addClass('has-error');
+            $('#email input').focus();
+            return false;
+          }
+          
+          // Report an empty password
+          if (!password) {
+            $('#password').append('<span class="help-block">Password required</span>');
+            $('#password').addClass('has-error');
+            $('#password input').focus();
+            return false;
+          }
+          
+         
+          
+          // Report an empty password
+          if (!gender) {
+            $('#gender').append('<span class="help-block">Gender required</span>');
+            $('#gender').addClass('has-error');
+            $('#gender input').focus();
+            return false;
+          }
+          
+          // Report an empty password
+          if (!age) {
+            $('#age').append('<span class="help-block">Age required</span>');
+            $('#age').addClass('has-error');
+            $('#age input').focus();
+            return false;
+          }
+          
+          // No errors
+          return true;
+        }
+      });
         </script>
     </body>
 </html>
