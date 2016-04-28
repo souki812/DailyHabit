@@ -28,8 +28,9 @@ $id = $_SESSION['user_id'];
         //Remove comment
          $id = (int) $_GET['user_id'];
          $success= $user->selectAll( $id);
-          
-$selection = $db->query("select * from users where user_id=$id");
+        $selection = $user->selectAll( $id);
+        $comments = $user->selectComments($id);
+
         }
         
         

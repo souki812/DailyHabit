@@ -83,5 +83,21 @@
  </div>
   
 </div>
+
+
+<div class="container page">
+ <div class="row">
+ 
+   <?php foreach ($comments as $row): ?>
+        <div class="col-md-6 col-md-offset-2  comment" >
+            <form action="activity.php" method="post" >
+            <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+             </form>
+        </div>
+            <?php endforeach; ?>
+            
+ </div>
+</div>
   
   

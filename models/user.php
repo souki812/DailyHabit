@@ -113,6 +113,12 @@ class User {
        return $this->db->query("select * from users where user_id= '$id' ");
 		
 	}
+	
+	 // Attempt to return the ID of this user
+    function selectComments($id) {
+       return $this->db->query("select * from newsfeed where user_id= '$id' ORDER BY time DESC");
+		
+	}
     // Attempt to return the ID of this user
     function login($email, $password) {
         $select = $this->db->prepare('select * from users where email=:email');
