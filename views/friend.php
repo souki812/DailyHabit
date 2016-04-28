@@ -1,3 +1,5 @@
+<?php require('menu.php'); ?>
+
 <style>
 
 /* Adds borders for tabs */
@@ -87,18 +89,18 @@
 
 <div class="container page">
  <div class="row">
- 
+  
    <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-2  comment" >
            
             <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
-          
+           
             
             <div class="button2"><button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal5" >Add a comment</button></div>   
         </div>
             <?php endforeach; ?>
-            
+      
  </div>
 </div>
 

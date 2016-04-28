@@ -25,12 +25,14 @@ $id = $_SESSION['user_id'];
         require_once('models/user.php');
         $user = new User($db);
         
-    
+       
+        
          if (isset($_GET['user_id'])) {
           
         $friend_id = (int) $_GET['user_id'];
          $_SESSION['friend'] = $friend_id;
         $success= $user->selectAll( $friend_id);
+        $names= $user->selectAll( $friend_id);
         $selection = $user->selectAll( $friend_id);
         $comments = $user->selectComments($friend_id);
 
@@ -43,9 +45,11 @@ $id = $_SESSION['user_id'];
          
         $friend_comments = $user->comment_friend($_POST['friendcomment'],  $_POST['task'], $id);
         $success= $user->selectAll( $_POST['task']);
+        $names= $user->selectAll( $friend_id);
         $selection = $user->selectAll( $_POST['task']);
         $comments = $user->selectComments($_POST['task']);
         }
+        
         
          }
         

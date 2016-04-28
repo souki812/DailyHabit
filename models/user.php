@@ -128,10 +128,7 @@ class User {
 		
 	}
 	
-	 function selectFriendComments($user_id, $friend_id) {
-       return $this->db->query("select * from newsfeed where user_id= '$user_id' AND friend_id= '$friend_id' ORDER BY time ASC");
-		
-	}
+	
     // Attempt to return the ID of this user
     function login($email, $password) {
         $select = $this->db->prepare('select * from users where email=:email');
