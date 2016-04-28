@@ -67,8 +67,8 @@
                     <div class="col-md-6" id="leftcol" style="border:solid">
                     <div class="media">
                         <a href="#" class = "thumbnail pull-left">        <!-- class= pull-left -->
-                            <img src="http://d34yn14tavczy0.cloudfront.net/images/no_photo.png" width="70" height="70" alt="The Acropololis"/>
-            
+                          
+                            <img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                         </a>
                         <div class="media-body"><br>
                             <h4>Name: </h4>
