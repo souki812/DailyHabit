@@ -32,6 +32,10 @@
        
          padding-top: 100px; 
     }
+    
+    .delete {
+        float: right;
+    }
 </style>
     
 
@@ -49,7 +53,7 @@
  <?php foreach ($current as $row): ?>
   <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
     <input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
-   <input type="submit" name="delete" value="delete">
+   <input type="submit" name="delete" class="delete" value="delete"><br>
              
    <?php endforeach; ?>
    </form>
@@ -96,7 +100,7 @@
  <?php foreach ($achieved as $row): ?>
   <h4> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
    <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
-   <input type="submit" name="delete" value="delete">
+   <input type="submit" name="delete" class="delete" value="delete"><br>
              
    <?php endforeach; ?>
    </form>
@@ -143,7 +147,7 @@
   <h4> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
   
    <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
-   <input type="submit" name="delete" value="delete">
+   <input type="submit" name="delete" class="delete" value="delete"><br>
    <?php endforeach; ?>
    </form>
     </div>

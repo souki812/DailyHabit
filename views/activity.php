@@ -37,6 +37,16 @@
         margin-bottom: 20px;
     }
     
+    .button1 {
+         display: inline-block;
+         float: left;
+    }
+    
+    .button2 {
+         display: inline-block;
+         float: right;
+    }
+    
     #profile-pic{
          width:150px; /* you can use % */
          height: 150px;
@@ -55,7 +65,7 @@
 <div class="container page" id="firstContainer">
  <div class="row">
         
-        <div class="col-md-6 col-md-offset-2  profile" >
+        <div class="col-md-7 col-md-offset-2  profile" >
            <div class="col-xs-6">
                  <h4>Profile</h4>
    
@@ -80,8 +90,7 @@
         <!--right container-->
         <div class="col-xs-6">
             <?php foreach ($selection as $row): ?>
-            <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?></h4><br>
-            <h4><?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4><br>
+            <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4><br>
             <h5><?php echo htmlentities($row['gender'], ENT_QUOTES, 'utf-8'); ?></h5><br>
             <h5><?php echo htmlentities($row['age'], ENT_QUOTES, 'utf-8'); ?></h5>
             <label>About me:</label>
@@ -89,8 +98,8 @@
             <?php endforeach; ?>
             
             
-<button  class="btn btn-success secondbutton"  data-toggle="modal" data-target="#modal1" >Add Biography</button>
-<button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
+<div class="button1"><button  class="btn btn-success secondbutton"  data-toggle="modal" data-target="#modal1" >Add Biography</button></div>   
+<div class="button2"><button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button></div>   
         </div>
         </div>
  </div>

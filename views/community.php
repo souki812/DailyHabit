@@ -54,6 +54,10 @@
                     margin-bottom: 20px;
                 }
                 
+                .proButton {
+                    float: right;
+                    margin-bottom: 10px;
+                }
                 
             </style>
            <h2><span class="glyphicon glyphicon-user top"></span> Community</h2><br>
@@ -72,11 +76,11 @@
                             <img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                         </a>
                         <div class="media-body"><br>
-                            <h4>Name: </h4>
-                            <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?>
+                            
+                            <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
                         </div>
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                         <input type="submit" name="friend" value="View Profile">
+                         <input type="submit" name="friend" class="proButton" value="View Profile">
                     </div>  
                     </div>
                 </div>
