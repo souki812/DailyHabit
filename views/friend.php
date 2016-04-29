@@ -90,6 +90,18 @@
         border-bottom: solid 1px; 
     }
     
+    .add {
+        border: #DC143C;
+        background-color: #DC143C;
+        color: white;
+    }
+    
+    .add: hover {
+        border: #555555;
+        background-color: #555555;
+        color: white;
+    }
+    
 
 </style>
  
@@ -129,7 +141,7 @@
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
            
             
-            <div class="button2"><button  class="btn btn-success secondbutton" data-toggle="modal" data-target="#modal5" >Add a comment</button></div>   
+            <div class="button2"><button  class="btn btn-default secondbutton add" data-toggle="modal" data-target="#modal5" >Add a comment</button></div>   
         </div>
             <?php endforeach; ?>
       
@@ -154,7 +166,7 @@
                     </textarea>
                     <?php if(isset($_SESSION['friend'])): ?>
                     <input type="hidden" name="task" value="<?php echo $_SESSION['friend']; unset($_SESSION['friend']);?>">
-                     <button type="submit" class="btn btn-success">Add</button>
+                     <button type="submit" class="btn btn-default add">Add</button>
                      <?php endif; ?>
                 </form>
                  
