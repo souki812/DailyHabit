@@ -124,7 +124,7 @@ class User {
 	
 	 // Attempt to return the ID of this user
     function selectComments($id) {
-       return $this->db->query("select * from newsfeed where user_id= '$id' ORDER BY time ASC");
+       return $this->db->query("select * from newsfeed natural join users where user_id= '$id' ORDER BY time ASC");
 		
 	}
 	

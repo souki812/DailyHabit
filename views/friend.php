@@ -136,7 +136,9 @@
   
    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
-           
+            <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="50" height="50"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                 <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                
             <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
            

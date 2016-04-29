@@ -35,7 +35,7 @@ $id = $_SESSION['user_id'];
         $names= $user->selectAll( $friend_id);
         $selection = $user->selectAll( $friend_id);
         $comments = $user->selectComments($friend_id);
-
+    
         
         }
         
@@ -45,9 +45,11 @@ $id = $_SESSION['user_id'];
          
         $friend_comments = $user->comment_friend($_POST['friendcomment'],  $_POST['task'], $id);
         $success= $user->selectAll( $_POST['task']);
-        $names= $user->selectAll( $friend_id);
+       
         $selection = $user->selectAll( $_POST['task']);
         $comments = $user->selectComments($_POST['task']);
+        
+    
         }
         
         

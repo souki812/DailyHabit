@@ -133,6 +133,9 @@
    <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-3  comment" >
             <form action="home.php" method="post" >
+            <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="50" height="50"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+            <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                
             <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">

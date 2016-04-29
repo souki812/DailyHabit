@@ -67,7 +67,7 @@ $id = $_SESSION['user_id'];
     
     }
 $selection = $db->query("select * from users where user_id=$id");
-$comments =  $db->query("select * from newsfeed where user_id=$id ORDER BY time DESC");
+$comments =  $db->query("select * from newsfeed natural join users where user_id=$id ORDER BY time DESC");
 $uploadimage = $db->query("select * from users where user_id=$id");
 
 // Show whatever this activity is

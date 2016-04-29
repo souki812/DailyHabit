@@ -26,10 +26,6 @@ create table newsfeed (
 );
 
 
-
-
-
-
 create table current(
 	current VARCHAR(255),
 	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

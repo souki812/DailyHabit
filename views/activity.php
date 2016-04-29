@@ -253,7 +253,10 @@
    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="activity.php" method="post" >
-            <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                 <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="50" height="50"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                 <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                
+            <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
