@@ -56,12 +56,12 @@
                 margin-top:150px;
             }
             
-          .hexagon {
-            position: relative;
-            width: 300px; 
-            height: 173.21px;
-            background-color: #ffe6f9;
-            margin: 86.60px 0;
+            .hexagon {
+                position: relative;
+                width: 300px; 
+                height: 173.21px;
+                background-color: #ffe6f9;
+                margin: 86.60px 0;
             }
 
             .hexagon:before,
@@ -98,11 +98,11 @@
                 height: 100px;
                 border: 3px solid #000;
             }
- 
-         
-           
+  
         </style>
     </head>
+    
+    
     <body data-spy="scroll" data-target="#navigation"> <!-- SCROLL SPY bootstrap -->
         
         <div class="navbar navbar-default navbar-fixed-top">

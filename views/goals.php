@@ -12,11 +12,10 @@
     }
     
       .comment {
-        border: 1px solid grey;
         margin-bottom: 20px;
-        margin-top:150px;
-        
+        margin-top:150px;    
     }
+    
     .firstbutton {
         margin-left: 40px;
         margin-bottom: 10px;
@@ -44,6 +43,8 @@
     
     .delete {
         float: right;
+        margin-right: 10px;
+        margin-bottom: 10px;
         border: #DC143C;
         background-color: #DC143C;
         color: white;
@@ -64,23 +65,31 @@
         margin-top: 5px;
     }
     
+    .type1 {
+        border-top: 20px solid #000;
+        border-bottom: 20px solid #000;
+    }
+    
+    .type2 {
+        background-color: #eeeeee;
+    }
+    
     
 </style>
     
     
     <div class="container PageContainer" id="secondcontainer">
-    
-    <div class="row margintop" class="centertext">
-        
-        
+        <div class="row margintop" class="centertext">
+            
+            
         <!--Current Goal-->
           <div class="col-md-4 comment">
-            <div class="form-group">
+            <div class="form-group type1">
                 <label><h4 class="form-group"><span class="glyphicon glyphicon-road goals"></span> Current Goal:</h4></label>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button><br>
             </div>
             
-            
+            <div class="type2">
                 <form action="goals.php" method="post">
                     <?php foreach ($current as $row): ?>
                     <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
@@ -88,6 +97,7 @@
                     <input type="submit" name="delete" class="delete" value="delete"><br>          
                     <?php endforeach; ?>
                 </form>
+            </div>
                 
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
@@ -110,11 +120,12 @@
         
         <!--Achieved Goals-->
         <div class="col-md-4 comment">
-                <div class="form-group">
+                <div class="form-group type1">
                     <label><h4><span class="glyphicon glyphicon-thumbs-up goals"></span> Achieved Goals:</h4></label>
                     <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button><br>
                 </div>
                 
+                <div class="type2">
                     <form action="goals.php" method="post">
                         <?php foreach ($achieved as $row): ?>
                         <h4> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
@@ -122,6 +133,7 @@
                         <input type="submit" name="delete" class="delete" value="delete"><br>
                         <?php endforeach; ?>
                     </form>
+                </div>
                     
                     
             <div class="modal" id="modal3">
@@ -145,11 +157,12 @@
         
         <!--Future Goals-->
         <div class="col-md-4 comment">
-             <div class="form-group">
+             <div class="form-group type1">
                 <label><h4><span class="glyphicon glyphicon-pushpin goals"></span> Future Goals:</h4></label>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button><br>
             </div>
                 
+            <div class="type2">
                 <form action="goals.php" method="post" >
                     <?php foreach ($future as $row): ?>
                     <h4> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
@@ -157,6 +170,7 @@
                     <input type="submit" name="delete" class="delete" value="delete"><br>
                     <?php endforeach; ?>
                 </form>
+            </div>
                 
                 
             <div class="modal" id="modal2">
