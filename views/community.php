@@ -60,6 +60,9 @@
                 }
                 
             </style>
+            
+            
+            
            <h2><span class="glyphicon glyphicon-user top"></span> Community</h2><br>
               <?php foreach ($selection as $row): ?>
               <form action="friend.php" method="get">
@@ -71,14 +74,15 @@
                 <div class="col-md-8 col-md-offset-3">
                     <div class="col-md-6" id="leftcol" style="border:solid">
                     <div class="media">
-                        <a href="#" class = "thumbnail pull-left">        <!-- class= pull-left -->
-                          
-                            <img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
-                        </a>
-                        <div class="media-body"><br>
-                            
-                            <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                        <div class="form-group">
+                            <br><img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic" class="img-circle" width="90" height="90"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                            <div class="media-body"><br>
+                            <label>
+                                <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                            </label>
+                            </div>
                         </div>
+                        
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                          <input type="submit" name="friend" class="proButton" value="View Profile">
                     </div>  
@@ -119,6 +123,6 @@
                         <h4 class="text-right">"-Joyce Meyer"</h4><br>
                         </div>
                     </div>
-                </div>
+    </div>
 
 </div>
