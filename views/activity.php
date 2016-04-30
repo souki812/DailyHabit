@@ -28,6 +28,7 @@
     
     .comment{
         border: 1px solid grey;
+        background-color: #eeeeee;
         margin-bottom: 20px;
         margin: left;
     }
@@ -171,31 +172,22 @@
 
 
 <div class="modal" id="modal2">
-    
     <div class="modal-dialog">
         <div class="modal-content">
-           
             <div class="modal-body">
                 <form action="activity.php" method="post" class="well">
                  <form class="form">
                     <label >Comment</label>
-                    
                     <textarea class="form-control" rows="5" id="comment"   name="newsfeed" autocomplete="off" autofocus>
                        
                     </textarea>
                     <input type="hidden" name="task" value="newsfeed">
-                     <button type="submit" class="btn btn-default add">Add</button>
+                    <button type="submit" class="btn btn-default add">Add</button>
+                 </form>
                 </form>
-                 
-                 
-              
-                </form>
-                 
             </div>
-            
         </div>
     </div>
-    
 </div>
 
 
@@ -205,37 +197,28 @@
 
 
 <div class="modal" id="modal1">
-    
     <div class="modal-dialog">
         <div class="modal-content">
-           
             <div class="modal-body">
                 <form action="activity.php" method="post" class="well">
                  <form class="form">
                     <label >Biography</label>
-                    
                     <textarea class="form-control" rows="5" id="biography" placeholder="Write Your Biography!"  name="biography" autocomplete="off" autofocus></textarea>
-                       
-                    
                     <input type="hidden" name="task" value="biography">
-                     <button type="submit" class="btn btn-default add">Add</button>
-                </form>
+                    <button type="submit" class="btn btn-default add">Add</button>
+                 </form>
                 </form>
             </div>
-            
         </div>
     </div>
-    
 </div>
 
         
-         </div>
-    
-    
-        
+</div>     
 
 </div> 
 </div>
+
 
 <br><div class="container">
   <h2>Your Progress:</h2>
@@ -245,18 +228,22 @@
   <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%" id="progress1">Progress</div>
 </div>
 
-    </div>
+</div>
 
 <div class="container page">
+    
  <div class="row">
- 
    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="activity.php" method="post" >
-                 <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="50" height="50"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
-                 <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                <div class="form-group">
+                    <img src="/views/uploads/<?php echo $row['picture'] ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                    <label>
+                    <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4><?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    </label>
+                </div>
                 
-            <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?>
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
@@ -272,3 +259,10 @@
 </div>
   
   
+
+
+
+
+
+
+

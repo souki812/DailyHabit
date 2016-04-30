@@ -15,6 +15,7 @@
     .comment{
         border: 1px solid grey;
         margin-bottom: 20px;
+        background-color: #eeeeee;
     }
     
     .newsfeed {
@@ -133,26 +134,27 @@
    <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-3  comment" >
             <form action="home.php" method="post" >
-            <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="50" height="50"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
-            <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
-                
-            <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                <div class="form-group">
+                    <img src="/views/uploads/<?php echo $row['picture'] ?>"  class="img-circle"   width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                    <label>
+                    <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    </label>
+                </div>
+            
             <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
            </form>
         </div>
     <?php endforeach; ?>
- 
- </div>
+</div>
 
  
  
 <div class="modal" id="modal3">
-    
     <div class="modal-dialog">
         <div class="modal-content">
-           
             <div class="modal-body">
                 <form action="home.php" method="post" class="well">
                  <form class="form">
@@ -168,10 +170,8 @@
             </div>
             
         </div>
-    </div>
-    
+    </div>  
 </div>
-   
 
 </div>
              
