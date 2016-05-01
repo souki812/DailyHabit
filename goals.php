@@ -24,37 +24,36 @@ $id = $_SESSION['user_id'];
       $user = new User($db);
         
         
-if (isset($_POST['task'])) {
+        if (isset($_POST['task'])) {
     
-         //Add a comment 
-        if ($_POST['task'] == 'current') {
-            $success = $user->current(  $_POST['current'], $id);
-            
+                // Add a goal 
+                if ($_POST['task'] == 'current') {
+                    $success = $user->current(  $_POST['current'], $id);
+                }
+        
+                if ($_POST['task'] == 'future') {
+                    $success = $user->future(  $_POST['future'], $id);
+                }
+        
+                if ($_POST['task'] == 'achieved') {
+                    $success = $user->achieved(  $_POST['achieved'], $id);
+                }
         }
-         if ($_POST['task'] == 'future') {
-            $success = $user->future(  $_POST['future'], $id);
-            
-        }
-         if ($_POST['task'] == 'achieved') {
-            $success = $user->achieved(  $_POST['achieved'], $id);
-            
-        }
-    }
     
-     if (isset($_POST['current_id'])) {
-        //Remove comment
-         $success= $user->remove_current( $_POST['current_id']);
-        }
-         if (isset($_POST['future_id'])) {
-        //Remove comment
-         $success= $user->remove_future( $_POST['future_id']);
-        }
-         if (isset($_POST['achieved_id'])) {
-        //Remove comment
-         $success= $user->remove_achieved( $_POST['achieved_id']);
+        // Remove a goal
+        if (isset($_POST['current_id'])) {
+            $success= $user->remove_current( $_POST['current_id']);
         }
 
-}
+        if (isset($_POST['future_id'])) {
+            $success= $user->remove_future( $_POST['future_id']);
+        }
+
+        if (isset($_POST['achieved_id'])) {
+            $success= $user->remove_achieved( $_POST['achieved_id']);
+        }
+
+    }
     
 $current = $db->query("select * from current where user_id=$id");
 $future = $db->query("select * from future where user_id=$id");

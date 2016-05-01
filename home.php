@@ -16,28 +16,26 @@ if (!isset($_SESSION['user_id'])) {
 $id = $_SESSION['user_id'];
 
 
- if (!isset($db)) {
-        $_SESSION['message'] = "Could not connect to the database.";
-    }else{
+if (!isset($db)) {
+    $_SESSION['message'] = "Could not connect to the database.";
+}else{
      
-      require_once('models/user.php');
-      $user = new User($db);
+    require_once('models/user.php');
+    $user = new User($db);
+}
 
-    }
 if (isset($_POST['task'])) {
     
-         //Add a comment 
-        if ($_POST['task'] == 'newsfeed') {
-            $success = $user->newsfeed( $_POST['newsfeed'], $id);
-            
-        }
-       
-          
-    }
-      if (isset($_POST['comment_id'])) {
-        //Remove comment
-         $success= $user->remove_comment( $_POST['comment_id']);
-        }
+    //Add a comment 
+    if ($_POST['task'] == 'newsfeed') {
+        $success = $user->newsfeed( $_POST['newsfeed'], $id);    
+    }        
+}
+      
+if (isset($_POST['comment_id'])) {
+    //Remove comment
+    $success= $user->remove_comment( $_POST['comment_id']);
+}
 
 
     

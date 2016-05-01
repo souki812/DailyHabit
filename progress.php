@@ -23,13 +23,9 @@ $val = $_POST['val'] + $value;
 
  if (!isset($db)) {
        exit();
-    }else{
-     
- 
-      
-    
+ }else{
       $success = $user->progress( $val, $id);
-      echo $success;
-        
-    }
+      echo $success;   
+ }
+
 $progress = $db->query("select * from users where user_id=$id");

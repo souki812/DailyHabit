@@ -7,6 +7,7 @@ require_once('models/database.php');
 $db = databaseConnection();
 
 
+
 // Must be logged in
 if (!isset($_SESSION['user_id'])) {
     header('Location: ./');
@@ -14,19 +15,16 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 
-
-
 $id = $_SESSION['user_id'];
 
 
  if (!isset($db)) {
-        $_SESSION['message'] = "Could not connect to the database.";
-    }else{
+    $_SESSION['message'] = "Could not connect to the database.";
+ }else{
      
-      require_once('models/user.php');
-      $user = new User($db);
-        
-    }
+    require_once('models/user.php');
+    $user = new User($db);  
+ }
 
 $selection = $db->query("select * from users");
 $fullName = $db->query("select * from users where user_id=$id");

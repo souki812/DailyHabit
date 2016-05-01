@@ -20,7 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
         // Attempt registration
         if ($_POST['task'] == 'register') {
          
-                $success = $user->register( $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age']);
+            $success = $user->register( $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age']);
               
             
             if ($success) {
@@ -28,24 +28,21 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
             } else {
                 $_SESSION['message'] = 'Sorry, there is an account with the same email.';
             }
-             }
+        }
           elseif ($_POST['task'] == 'login') {
-            $user_id = $user->login($_POST['email'], $_POST['password']);
+              $user_id = $user->login($_POST['email'], $_POST['password']);
             
-            if (isset($user_id)) {
-                session_regenerate_id(true); // New session for login
-                $_SESSION['user_id'] = $user_id;
-            } else {
-                $_SESSION['message'] = 'Wrong username or password.';
-            }
+              if (isset($user_id)) {
+                  session_regenerate_id(true); // New session for login
+                  $_SESSION['user_id'] = $user_id;
+              } else {
+                  $_SESSION['message'] = 'Wrong username or password.';
+              }
          
        
         }
-        
-        // Or attempt login
-       
-        }
     }
+}
 
 
 // Return home

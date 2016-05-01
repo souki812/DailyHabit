@@ -8,8 +8,6 @@ $db = databaseConnection();
 
 
 
-
-
 // Must be logged in
 if (!isset($_SESSION['user_id'])) {
     exit();
@@ -26,27 +24,27 @@ $id = $_SESSION['user_id'];
         
         
          if (isset($_POST['task'])) {
-        //Add a biography
-        if ($_POST['task'] == 'biography') {
-            $success = $user->bio($id,  $_POST['biography']);
-
-        }
+            //Add a biography
+            if ($_POST['task'] == 'biography') {
+                $success = $user->bio($id,  $_POST['biography']);
+            }
         
-        //Add a comment
-        if ($_POST['task'] == 'newsfeed') {
-            $success = $user->newsfeed( $_POST['newsfeed'], $id);
-        }
-    
+            //Add a comment
+            if ($_POST['task'] == 'newsfeed') {
+                $success = $user->newsfeed( $_POST['newsfeed'], $id);
+            }
         }
         
         if (isset($_POST['comment_id'])) {
-        //Remove comment
-         $success= $user->remove_comment( $_POST['comment_id']);
+            //Remove comment
+            $success= $user->remove_comment( $_POST['comment_id']);
         }
         
         if(isset($_POST['profile']))
-        $allow = array("jpg", "jpeg", "gif", "png");
-        $todir = 'views/uploads/';
+            $allow = array("jpg", "jpeg", "gif", "png");
+            $todir = 'views/uploads/';
+            
+            
     if ( $_FILES['file']['tmp_name'] ){
     
     $info = explode('.', strtolower( $_FILES['file']['name']) ); // whats the extension of the file
@@ -61,11 +59,10 @@ $id = $_SESSION['user_id'];
         // error this file ext is not allowed
          echo "Error: " . $_FILES["file"]["error"] . "<br>";
     }
-    }
-        
-        
-    
-    }
+  }
+}
+
+
 $selection = $db->query("select * from users where user_id=$id");
 $comments =  $db->query("select * from newsfeed natural join users where user_id=$id ORDER BY time DESC");
 $uploadimage = $db->query("select * from users where user_id=$id");

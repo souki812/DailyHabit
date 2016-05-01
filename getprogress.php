@@ -20,13 +20,10 @@ $val = $_POST['val'] ;
 
  if (!isset($db)) {
        exit();
-    }else{
-     
- 
-      
+ }else{
       $val = $val + 5;
       $success = $user->progress( $val, $id);
       echo $success;
-        
-    }
+}
+
 $progress = $db->query("select * from users where user_id=$id");
