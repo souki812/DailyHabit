@@ -25,8 +25,9 @@
     }
     
     .comment{
-         border: 1px solid grey;
+        border: 1px solid grey;
         margin-bottom: 20px;
+        background-color: #eeeeee;
         margin: left;
     }
     
@@ -132,55 +133,45 @@
 
 
 <div class="container page">
- <div class="row">
+  <div class="row">
   
    <?php foreach ($comments as $row): ?>
-        <div class="col-md-9 col-md-offset-2  comment" >
-            <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="50" height="50"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
-                 <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
-                
-            <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
-            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
-           
+        <div class="col-md-8 col-md-offset-2  comment">
+            <div class="form-group">
+                <img src="/views/uploads/<?php echo $row['picture'] ?>"  width="70" height="70" class="img-circle" onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                <label>
+                <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                </label>
+            </div>
             
-            <div class="button2"><button  class="btn btn-default secondbutton add" data-toggle="modal" data-target="#modal5" >Add a comment</button></div>   
+            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+            <button  class="btn btn-default secondbutton add" data-toggle="modal" data-target="#modal5" >Add a comment</button>
         </div>
             <?php endforeach; ?>
-      
- </div>
+  </div>
 </div>
 
 
  
 
 <div class="modal" id="modal5">
-    
     <div class="modal-dialog">
-        <div class="modal-content">
-           
+        <div class="modal-content"> 
             <div class="modal-body">
                 <form action="friend.php" method="post" class="well">
                  <form class="form">
                     <label >Comment</label>
-                    
-                    <textarea class="form-control" rows="5" id="comment"   name="friendcomment" autocomplete="off" autofocus>
-                       
-                    </textarea>
+                    <textarea class="form-control" rows="5" id="comment"   name="friendcomment" autocomplete="off" autofocus></textarea>
                     <?php if(isset($_SESSION['friend'])): ?>
                     <input type="hidden" name="task" value="<?php echo $_SESSION['friend']; unset($_SESSION['friend']);?>">
-                     <button type="submit" class="btn btn-default add">Add</button>
-                     <?php endif; ?>
+                    <button type="submit" class="btn btn-default add">Add</button>
+                    <?php endif; ?>
                 </form>
-                 
-                 
-              
-                </form>
-                 
+                </form>     
             </div>
-            
         </div>
     </div>
-    
 </div>
   
   

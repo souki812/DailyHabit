@@ -8,10 +8,6 @@
         border-bottom: 20px solid #000;
     }
     
-    .hometop{
-     
-    }
-    
     .comment{
         border: 1px solid grey;
         margin-bottom: 20px;
@@ -34,10 +30,6 @@
         border: #555555;
         background-color: #555555;
         color: white;
-    }
-    
-    .button1 {
-        
     }
     
     .secondbutton{
@@ -93,7 +85,6 @@
         <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%"  id="progress1">Progress</div>
         </div>
-
     </div><br><br>
     
     
