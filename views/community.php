@@ -1,53 +1,11 @@
 <?php require('menu.php'); ?>
             <style>
-             
-                #first {
-                    
-                    background: url("../views/images/scene1.jpg");
-                    width: 100%;
-                    background-size: cover;
-                    height: 150px;
-                    border-radius: 10px;
-                    font-family: Helveltica, serif;
-                    text-align: center;
-                    color:white;
-                }
                 
-                #second {
-                    background: url("../views/images/scene3.jpg");
-                    width: 100%;
-                    background-size: cover;
-                    height: 150px;
-                    border-radius: 10px;
-                    font-family: Helveltica, serif;
-                    text-align: center;
-                    color:white;
-                }
-                
-                #third {
-                    background: url("../views/images/scene2.jpg");
-                    width: 100%;
-                    background-size: cover;
-                    height: 100px;
-                    border-radius: 10px;
-                    font-family: Helveltica, serif;
-                    text-align: center;
-                    color:white;
-                }
-                
-                #fourth {
-                    background: url("../views/images/scene4.jpg");
-                    width: 100%;
-                    background-size: cover;
-                    height: 150px;
-                    border-radius: 10px;
-                    font-family: Helveltica, serif;
-                    text-align: center;
-                    color:white;
-                }
-                
-                .top{
-                    padding-top: 100px;
+                .community {
+                    margin-top: 150px;
+                    border-top: 20px solid #000;
+                    border-bottom: 20px solid #000;
+                    font-family: Rockwell, serif;
                 }
                 
                 .container{
@@ -57,22 +15,41 @@
                 .proButton {
                     float: right;
                     margin-bottom: 10px;
+                    border-style: solid;
+                    border: #000;
+                    background-color: #DC143C;
+                    color: white;
+                }
+                
+                .comment {
+                    border: 1px solid grey;
+                    background-color: #eeeeee;
                 }
                 
             </style>
             
+    <div class="container page">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <center>
+                <div class="community">
+                    <h2><span class="glyphicon glyphicon-user top"></span> Community</h2><br>
+                </div>
+                </center>
+            </div>
+        </div>
+    
             
             
-           <h2><span class="glyphicon glyphicon-user top"></span> Community</h2><br>
-              <?php foreach ($selection as $row): ?>
-              <form action="friend.php" method="get">
-            <div class="container">
             
             
+        <br><br><br><?php foreach ($selection as $row): ?>
+        <form action="friend.php" method="get">
+        <div class="container">
             <div class="row">
               
-                <div class="col-md-8 col-md-offset-3">
-                    <div class="col-md-6" id="leftcol" style="border:solid">
+                <div class="col-md-8 col-md-offset-4">
+                    <div class="col-md-6 comment" id="leftcol">
                     <div class="media">
                         <div class="form-group">
                             <br><img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic" class="img-circle" width="90" height="90"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
@@ -92,37 +69,4 @@
         </div>
     </form>
     <?php endforeach; ?>
-<!------------------------------------------------------------>
-
-
-
-<div class="container">
-    <div class="row">
-                    <!--Right main column-->
-                    <div class="col-md-4">
-                        <p> Right main content</p>
-                        
-                        
-                        <div class="centertext" id="first">
-                        <h4><br>"First we form habits, then they form us.  Conquer your bad habits, or they'll eventually conquer you."</h4>
-                        <h4 class="text-right">"-Rob Gilbert"</h4><br>
-                        </div>
-                        
-                        <div class="centertext" id="second">
-                        <h4><br>"Habits are important.  Up do 90% of our everyday behavior is based on habit.  Nearly all of what we do each day, every day, is simply habit"</h4>
-                        <h4 class="text-right">"-Jack D. Hodge"</h4><br>
-                        </div>
-                        
-                        <div class="centertext" id="third">
-                        <h4><br>"Motivation is what gets you started.  Habit is what keeps you going."</h4>
-                        <h4 class="text-right">"-Jim Rohn"</h4><br>
-                        </div>
-                        
-                        <div class="centertext" id="fourth">
-                        <h4><br>"Focus on the good habit you want to do, not the bad habit you don't want to do.  Overcome the bad with the good."</h4>
-                        <h4 class="text-right">"-Joyce Meyer"</h4><br>
-                        </div>
-                    </div>
     </div>
-
-</div>

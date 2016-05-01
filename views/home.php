@@ -104,10 +104,10 @@
                 <h3 class="words">Your Daily Summary</h3>
             </div>
 
-                <div class="form-group">
-                    <label>Have you achieved today's Habit?</label>
-                    <button class="btn btn-default firstbutton" id="target" type="button">Achieved</button>
-                </div>
+            <div class="form-group">
+                <label>Have you achieved today's Habit?</label>
+                <button class="btn btn-default firstbutton" id="target" type="button">Achieved</button>
+            </div>
             </center>
         </div>
     </div>
