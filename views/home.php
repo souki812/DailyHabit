@@ -12,6 +12,11 @@
         border: 1px solid grey;
         margin-bottom: 20px;
         background-color: #eeeeee;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+    
+    .words {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
     .newsfeed {
@@ -128,12 +133,12 @@
                 <div class="form-group">
                     <img src="/views/uploads/<?php echo $row['picture'] ?>"  class="img-circle"   width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                     <label>
-                    <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4 class="words"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4 class="words"><?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
                     </label>
                 </div>
             
-            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+            <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
            </form>

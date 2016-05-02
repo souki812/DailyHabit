@@ -31,6 +31,7 @@
         background-color: #eeeeee;
         margin-bottom: 20px;
         margin: left;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
      .firstbutton{
@@ -108,7 +109,12 @@
     
     .bio {
         border-top: solid 1px;
-        border-bottom: solid 1px; 
+        border-bottom: solid 1px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+    
+    .words {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
     .add {
@@ -202,7 +208,7 @@
             <div class="modal-body">
                 <form action="activity.php" method="post" class="well">
                  <form class="form">
-                    <label >Biography</label>
+                    <label>Biography</label>
                     <textarea class="form-control" rows="5" id="biography" placeholder="Write Your Biography!"  name="biography" autocomplete="off" autofocus></textarea>
                     <input type="hidden" name="task" value="biography">
                     <button type="submit" class="btn btn-default add">Add</button>
@@ -239,12 +245,12 @@
                 <div class="form-group">
                     <img src="/views/uploads/<?php echo $row['picture'] ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                     <label>
-                    <h4> <?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4><?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4 class="text"><?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
                     </label>
                 </div>
                 
-            <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?>
+            <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
             </form>
