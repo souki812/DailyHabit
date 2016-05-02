@@ -29,15 +29,18 @@ $admin = $_SESSION['admin'];
   if ($admin == 0 ){
     $selection = $db->query("select * from users");
     $fullName = $db->query("select * from users where user_id=$id");
+    
+     if (isset($_POST['user_id'])) {
+            $success= $user->deleteAccount($_POST['user_id']);
+        }    
   }       
  if($admin == 1 ){
     $selection = $db->query("select * from users");
     $fullName = $db->query("select * from users where user_id=$id");
     
-    if (isset($_GET['user_id'])) {
-            echo "yes";
-            $success= $user->deleteAccount( $_GET['user_id']);
-        }       
+   if (isset($_POST['user_id'])) {
+            $success= $user->deleteAccount($_POST['user_id']);
+        }      
             
                             
     }

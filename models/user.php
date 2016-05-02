@@ -30,7 +30,7 @@ class User {
 	function deleteAccount($user_id){
 		$delete = $this->db->prepare('delete from users where user_id= :user_id');
 		$delete->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-		$delete->execute();
+		return $delete->execute();
 	}
 	
 	function newsfeed($comment, $id){

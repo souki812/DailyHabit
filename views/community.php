@@ -64,9 +64,9 @@
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                          <input type="submit" name="friend" class="proButton" value="View Profile">
                          </form>
-                          <form action="community.php" method="get">
+                          <form action="community.php" method="post">
                              <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                             <input type="submit" name="delete" class="delete" value="delete">
+                             <input type="submit" name="delete" class="delete" value="Delete Account">
                             
                           </form>
                          
