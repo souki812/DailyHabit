@@ -140,15 +140,15 @@
                 </div>
                     
                     
-            <div class="modal" id="modal3">
+            <div class="modal" id="modal1">
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
                         <form action="goals.php" method="post" class="well">
                         <form class="form">
-                            <label >Current</label>
-                            <textarea class="form-control" rows="5" id="comment1"  name="current" autocomplete="off" autofocus></textarea>
-                            <input type="hidden" name="task" value="current">
+                            <label>Achieved</label>
+                            <textarea class="form-control" rows="5" name="achieved" autocomplete="off" autofocus></textarea>
+                            <input type="hidden" name="task" value="achieved">
                             <button type="submit" class="btn btn-default button">Add</button>
                         </form>
                         </form>
