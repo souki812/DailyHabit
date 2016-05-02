@@ -163,14 +163,12 @@
         <div class="modal-content"> 
             <div class="modal-body">
                 <form action="friend.php" method="post" class="well">
-                 <form class="form">
                     <label >Comment</label>
                     <textarea class="form-control" rows="5" id="comment"   name="friendcomment" autocomplete="off" autofocus></textarea>
                     <?php if(isset($_SESSION['friend'])): ?>
                     <input type="hidden" name="task" value="<?php echo $_SESSION['friend']; unset($_SESSION['friend']);?>">
                     <button type="submit" class="btn btn-default add">Add</button>
                     <?php endif; ?>
-                </form>
                 </form>     
             </div>
         </div>
