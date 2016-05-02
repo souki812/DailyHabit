@@ -24,6 +24,7 @@
                 .comment {
                     border: 1px solid grey;
                     background-color: #eeeeee;
+                    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
                 }
                 
             </style>

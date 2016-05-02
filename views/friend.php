@@ -29,6 +29,7 @@
         margin-bottom: 20px;
         background-color: #eeeeee;
         margin: left;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
      .firstbutton{
@@ -84,11 +85,13 @@
         margin-left: 25px;
         margin-top: 30px;
         text-align: 50%;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
     .bio {
         border-top: solid 1px;
-        border-bottom: solid 1px; 
+        border-bottom: solid 1px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
     .add {
