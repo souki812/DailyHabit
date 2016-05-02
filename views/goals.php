@@ -25,7 +25,7 @@
         /* margin-left: 20px; */
         float: right;
         display: inline-block;
-        margin-top: 10px;
+        margin-top: 30px;
         border: #DC143C;
         background-color: #DC143C;
         color: white
@@ -62,7 +62,11 @@
     }
     
     .goals {
-        margin-top: 5px;
+        margin-top: 10px;
+    }
+    
+    .words {
+        font-family: Rockwell, serif;
     }
     
     .type1 {
@@ -72,6 +76,7 @@
     
     .type2 {
         background-color: #eeeeee;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
 </style>
@@ -84,7 +89,7 @@
         <!--Current Goal-->
           <div class="col-md-4 comment">
             <div class="form-group type1">
-                <label><h4 class="form-group"><span class="glyphicon glyphicon-road goals"></span> Current Goal:</h4></label>
+                <label><h3 class="form-group words"><span class="glyphicon glyphicon-road goals"></span> Current Goal:</h3></label>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button><br>
             </div>
             
@@ -120,7 +125,7 @@
         <!--Achieved Goals-->
         <div class="col-md-4 comment">
                 <div class="form-group type1">
-                    <label><h4><span class="glyphicon glyphicon-thumbs-up goals"></span> Achieved Goals:</h4></label>
+                    <label><h3 class="words"><span class="glyphicon glyphicon-thumbs-up goals"></span> Achieved Goals:</h3></label>
                     <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button><br>
                 </div>
                 
@@ -157,7 +162,7 @@
         <!--Future Goals-->
         <div class="col-md-4 comment">
              <div class="form-group type1">
-                <label><h4><span class="glyphicon glyphicon-pushpin goals"></span> Future Goals:</h4></label>
+                <label><h3 class="words"><span class="glyphicon glyphicon-pushpin goals"></span> Future Goals:</h3></label>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button><br>
             </div>
                 
