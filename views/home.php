@@ -95,7 +95,6 @@
 </style>
     
  <div class="container page">
-   
    <div class="container">
         <h2>Your Progress:</h2>
         <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
@@ -173,10 +172,7 @@
                 <form action="home.php" method="post" class="well">
                  <form class="form">
                     <label >Comment</label>
-                    
-                    <textarea class="form-control" rows="5" id="comment1"  name="newsfeed" autocomplete="off" autofocus>
-                       
-                    </textarea>
+                    <textarea class="form-control" rows="5" id="comment1"  name="newsfeed" autocomplete="off" autofocus></textarea>
                     <input type="hidden" name="task" value="newsfeed">
                      <button type="submit" class="btn btn-default add">Add</button>
                 </form>

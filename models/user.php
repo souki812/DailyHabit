@@ -155,10 +155,5 @@ class User {
 		return $insert->execute();
 	}
 	
-	
-	
-	
-	
-	
-	
+
 }

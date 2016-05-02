@@ -4,7 +4,7 @@
                 
       <script>
       $(document).ready(function() {
-      var val =0;
+      var val = 0;
       
             $.ajax({
                   type: 'POST',
@@ -53,6 +53,7 @@
                         $("#progress1").html('0%');       
                   });
       });
+      
       </script>
      
     </body>
