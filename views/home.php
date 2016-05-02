@@ -37,6 +37,19 @@
         color: white;
     }
     
+    .reset {
+        border: #DC143C;
+        background-color: #DC143C;
+        color: white;
+        float: right;
+    }
+    
+    .reset: hover {
+        border: #555555;
+        background-color: #555555;
+        color: white;
+    }
+    
     .secondbutton{
         margin-left: 20px;
         margin-bottom: 10px;
@@ -89,6 +102,11 @@
   
         <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%"  id="progress1">Progress</div>
+        </div>
+        
+        <!--Reset Button-->
+        <div class="reset">
+            <button class="btn btn-default reset" id="reset" type="button">Reset</button>
         </div>
     </div><br><br>
     

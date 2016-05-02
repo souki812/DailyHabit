@@ -18,7 +18,7 @@
             });
 
             
-            
+                  // If the achieved button is pressed
                   $("#target").click(function() {
       
                         $.ajax({
@@ -43,6 +43,30 @@
                               }
                         });  
                   });
+                  
+                  
+                  
+                  
+                  // If the reset button is pressed
+                  $("#reset").click(function() {
+      
+                        $.ajax({
+                              type: 'POST',
+                              url: 'getprogress.php',
+                              data: { val:val },
+                              success: function(response) {
+            
+                                    val = response;
+                                    
+                                    if (val <=100) {
+                                          val = 0;
+                                    }
+                                    //$('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+                                    //$("#progress1").html(response + '%');
+                              }
+                        });  
+                  });
+                  
 
       });
       </script>
