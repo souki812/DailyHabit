@@ -6,36 +6,43 @@
       $(document).ready(function() {
       var val =0;
       
-    $.ajax({
-        type: 'POST',
-        url: 'progress.php',
-        data: { val:val },
-        success: function(response) {
-           val = response;
+            $.ajax({
+                  type: 'POST',
+                  url: 'progress.php',
+                  data: { val:val },
+                  success: function(response) {
+                        val = response;
            
-            $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
-       
-        }
-    });
+                        $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+                  }
+            });
 
             
             
-$("#target").click(function() {
- 
-    $.ajax({
-        type: 'POST',
-        url: 'getprogress.php',
-        data: { val:val },
-        success: function(response) {
+                  $("#target").click(function() {
+      
+                        $.ajax({
+                              type: 'POST',
+                              url: 'getprogress.php',
+                              data: { val:val },
+                              success: function(response) {
             
-           val = response;
+                                    val = response;
+                        
+                                    if (val == 100) {
+                                          window.alert("Congratulations on reaching 100%!");
+                                    }
+        
+                                    // If the progress bar reaches 100% reset it back to 0
+                                    if (val > 100) {
+                                          val = 0;
+                                    }
          
-            $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
-             $("#progress1").html(response + '%');
-        }
-    });
-   
-});
+                                    $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+                                    $("#progress1").html(response + '%');
+                              }
+                        });  
+                  });
 
       });
       </script>
