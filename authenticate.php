@@ -19,8 +19,8 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
         
         // Attempt registration
         if ($_POST['task'] == 'register') {
-         
-            $success = $user->register( $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age']);
+            $admin = 0;
+            $success = $user->register( $_POST['first'], $_POST['last'], $_POST['email'], $_POST['password'],  $_POST['gender'], $_POST['age'],$admin);
               
             
             if ($success) {

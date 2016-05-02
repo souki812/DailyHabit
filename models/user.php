@@ -14,18 +14,24 @@ class User {
 	} **/
     
     // Attempt to add this user and return whether it worked
-    function register($first, $last, $email, $password, $gender, $age) {
+    function register($first, $last, $email, $password, $gender, $age, $admin) {
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        $insert = $this->db->prepare('insert into users(first,last,email,password,gender,age) values(:first,:last,:email,:password,:gender,:age)');
+        $insert = $this->db->prepare('insert into users(first,last,email,password,gender,age,admin) values(:first,:last,:email,:password,:gender,:age,:admin)');
         $insert->bindParam(':first', $first, PDO::PARAM_STR);
         $insert->bindParam(':last', $last, PDO::PARAM_STR);
         $insert->bindParam(':email', $email, PDO::PARAM_STR);
         $insert->bindParam(':password', $hash, PDO::PARAM_STR);
         $insert->bindParam(':gender', $gender, PDO::PARAM_STR);
         $insert->bindParam(':age', $age, PDO::PARAM_INT);
-        
+        $insert->bindParam(':admin', $admin, PDO::PARAM_INT);
         return $insert->execute();
     }
+	
+	function deleteAccount($user_id){
+		$delete = $this->db->prepare('delete from users where user_id= :user_id');
+		$delete->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
 	
 	function newsfeed($comment, $id){
 		$insert = $this->db->prepare("insert into newsfeed(comment,user_id) values(:comment,:user_id)");
