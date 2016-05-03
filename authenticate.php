@@ -35,6 +35,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
               if (isset($user_id)) {
                   session_regenerate_id(true); // New session for login
                   $_SESSION['user_id'] = $user_id;
+                  $_SESSION['admin'] = $user->getadmin($user_id);
               } else {
                   $_SESSION['message'] = 'Wrong username or password.';
               }

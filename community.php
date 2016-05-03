@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
 $id = $_SESSION['user_id'];
-$admin = $_SESSION['admin'];
+
 
 
 
@@ -24,14 +24,13 @@ $admin = $_SESSION['admin'];
  }else{
      
     require_once('models/user.php');
-    $user = new User($db);  
- }
- 
-  if ($admin == 0 ){
+    $user = new User($db);
+    $admin = $user->getadmin($id);
+    
+    if ($admin == 0 ){
     $selection = $db->query("select * from users");
     $fullName = $db->query("select * from users where user_id=$id");
-    
-     
+   
   }       
  if($admin == 1 ){
     $_SESSION['administrator'] = 1;
@@ -44,6 +43,9 @@ $admin = $_SESSION['admin'];
             
                             
     }
+ }
+ 
+  
    
 
 

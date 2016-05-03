@@ -64,7 +64,7 @@
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                          <input type="submit" name="friend" class="proButton" value="View Profile">
                          </form>
-        <?php if ($_SESSION['administrator']==1): ?>
+        <?php if (isset($_SESSION['administrator'])): ?>
                           <form action="community.php" method="post">
                              <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                              <input type="submit" name="delete" class="delete" value="Delete Account">

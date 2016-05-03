@@ -149,6 +149,17 @@ class User {
         }
     }
 	
+	
+	//Is the user an admin or not
+	function getadmin($id){
+		 $select = $this->db->prepare('select * from users where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+        
+        $row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['admin'];
+	}
+	
 	function picture($file, $id){
 		$insert = $this->db->prepare("UPDATE users SET picture=:picture WHERE user_id=$id");
         $insert->bindParam(':picture', $file, PDO::PARAM_STR);
