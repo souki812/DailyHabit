@@ -147,7 +147,7 @@
             
             
             <?php foreach ($uploadimage as $row): ?>
-                <img src="/views/uploads/<?php echo $row['picture'] ?>"  class="circleBase type1"   id="profile-pic"   onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="circleBase type1"   id="profile-pic"   onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
              <?php endforeach; ?>
 
             <center>
@@ -243,7 +243,7 @@
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="activity.php" method="post" >
                 <div class="form-group">
-                    <img src="/views/uploads/<?php echo $row['picture'] ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                    <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                     <label>
                     <h4 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
                     <h4 class="text"><?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>

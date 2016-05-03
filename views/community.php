@@ -53,7 +53,7 @@
                     <div class="col-md-6 comment" id="leftcol">
                     <div class="media">
                         <div class="form-group">
-                            <br><img src="/views/uploads/<?php echo $row['picture'] ?>"  id="profile-pic" class="img-circle" width="90" height="90"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                            <br><img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  id="profile-pic" class="img-circle" width="90" height="90"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                             <div class="media-body"><br>
                             <label>
                                 <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>

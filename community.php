@@ -10,7 +10,6 @@ $db = databaseConnection();
 
 // Must be logged in
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ./');
     exit();
 }
 
@@ -19,7 +18,7 @@ $id = $_SESSION['user_id'];
 $admin = $_SESSION['admin'];
 
 
-$_SESSION['msg'] = $admin;
+
  if (!isset($db)) {
     $_SESSION['message'] = "Could not connect to the database.";
  }else{
