@@ -7,7 +7,6 @@
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         
-        
         <style>
             .navbar-brand{
                 font-size:2em;  
@@ -28,6 +27,18 @@
             #firstRow{
                 margin-top:100px;
                 text-align: center;
+            }
+            
+            .login {
+                border: #ffb3b3;
+                background-color: #ffb3b3;
+                color: white;
+            }
+    
+            .login: hover {
+                border: #555555;
+                background-color: #555555;
+                color: white;
             }
             
             .large{
@@ -136,7 +147,7 @@
                     </div>
                     
                     <input type="hidden" name="task" value="login">
-                    <button type="submit" class="btn btn-success">Log In</button>
+                    <button type="submit" class="btn btn-default login">Log In</button>
                 </form>
                 </div>
                 

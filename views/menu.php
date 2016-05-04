@@ -1,3 +1,17 @@
+<style>
+    
+    .button {
+        border: #ffb3b3;
+        background-color: #ffb3b3;
+    }
+    
+    .button: hover {
+        border: #555555;
+        background-color: #555555;
+    }
+            
+</style>
+
 <div class="navbar navbar-default navbar-fixed-top">
             
             <div class="container">
@@ -20,7 +34,7 @@
                 
                 <form  class="navbar-form navbar-right">
                      <input type="hidden" name="task" value="logout">
-                     <button type="submit" class="btn btn-success" ><a href="../logout.php">Log Out</a></button>
+                     <button type="submit" class="btn btn-default button"><a href="../logout.php">Log Out</a></button>
                 </form>
                 </div>
             </div>
