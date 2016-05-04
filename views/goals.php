@@ -7,10 +7,6 @@
         border: 1px solid grey;
     }
     
-    .hometop {
-     
-    }
-    
       .comment {
         margin-bottom: 20px;
         margin-top:150px;    

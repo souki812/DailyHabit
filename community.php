@@ -28,26 +28,21 @@ $id = $_SESSION['user_id'];
     $admin = $user->getadmin($id);
     
     if ($admin == 0 ){
-    $selection = $db->query("select * from users");
-    $fullName = $db->query("select * from users where user_id=$id");
-   
-  }       
- if($admin == 1 ){
-    $_SESSION['administrator'] = 1;
-    $selection = $db->query("select * from users");
-    $fullName = $db->query("select * from users where user_id=$id");
+        $selection = $db->query("select * from users");
+        $fullName = $db->query("select * from users where user_id=$id");
+    }
     
-   if (isset($_POST['user_id'])) {
+    if($admin == 1 ){
+        $_SESSION['administrator'] = 1;
+        $selection = $db->query("select * from users");
+        $fullName = $db->query("select * from users where user_id=$id");
+    
+        if (isset($_POST['user_id'])) {
             $success= $user->deleteAccount($_POST['user_id']);
-        }      
-            
-                            
+        }                             
     }
  }
  
-  
-   
-
 
 
 
