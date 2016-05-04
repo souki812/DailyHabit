@@ -5,7 +5,7 @@
         background-color: #ffb3b3;
     }
     
-    .button: hover {
+    .button hover {
         border: #555555;
         background-color: #555555;
     }

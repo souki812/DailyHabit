@@ -55,9 +55,9 @@ $id = $_SESSION['user_id'];
 
     }
     
-$current = $db->query("select * from current where user_id=$id");
-$future = $db->query("select * from future where user_id=$id");
-$achieved = $db->query("select * from achieved where user_id=$id");
+$current =  $user->selectCurrent( $id);
+$future =  $user->selectFuture( $id);
+$achieved =  $user->selectAchieved( $id);
 
 // Show whatever this activity is
 require('views/header.php');

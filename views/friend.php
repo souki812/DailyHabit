@@ -28,7 +28,6 @@
         border: 1px solid grey;
         margin-bottom: 20px;
         background-color: #eeeeee;
-        margin: left;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
@@ -67,7 +66,6 @@
     
     .circleBase {
         border-radius: 50%;
-        behavior: url(PIE.htc); /* remove if you don't care about IE8 */
         }
 
     .type1 {
@@ -84,7 +82,7 @@
         margin:auto;
         margin-left: 25px;
         margin-top: 30px;
-        text-align: 50%;
+        text-align: center;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
@@ -100,7 +98,7 @@
         color: white;
     }
     
-    .add: hover {
+    .add hover {
         border: #555555;
         background-color: #555555;
         color: white;
@@ -110,7 +108,7 @@
 </style>
  
 
-<br><br><br><br><br><div class="container page" id="firstContainer">
+<div class="container page" id="firstContainer">
  <div class="row">
         
         <div class="col-md-8 col-md-offset-2  profile" >

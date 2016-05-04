@@ -80,6 +80,12 @@ class User {
 		return $insert->execute();
 	}
 	
+		 // Attempt to return the ID of this user
+    function selectCurrent($id) {
+       return $this->db->query("select * from current where user_id= '$id' ");
+		
+	}
+	
 	function remove_current($current_id){
 		$delete = $this->db->prepare('delete from current where current_id= :current_id');
 		$delete->bindParam(':current_id', $current_id, PDO::PARAM_INT);
@@ -94,6 +100,11 @@ class User {
 		return $insert->execute();
 	}
 	
+	 function selectAchieved($id) {
+       return $this->db->query("select * from achieved where user_id= '$id' ");
+		
+	}
+	
 	function remove_achieved($achieved_id){
 		$delete = $this->db->prepare('delete from achieved where achieved_id= :achieved_id');
 		$delete->bindParam(':achieved_id', $achieved_id, PDO::PARAM_INT);
@@ -106,6 +117,11 @@ class User {
         $insert->bindParam(':future', $future, PDO::PARAM_STR);
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
+	}
+	
+	 function selectFuture($id) {
+       return $this->db->query("select * from future where user_id= '$id' ");
+		
 	}
 	
 	function remove_future($future_id){
@@ -125,6 +141,19 @@ class User {
 	 // Attempt to return the ID of this user
     function selectAll($id) {
        return $this->db->query("select * from users where user_id= '$id' ");
+		
+	}
+	
+		 
+	 // Attempt to return the ID of this user
+    function communityselect() {
+       return $this->db->query("select * from users");
+		
+	}
+	
+		 // Attempt to return the ID of this user
+    function selectNewsfeed($id) {
+       return $this->db->query("select * from newsfeed natural join users where user_id= '$id'  ORDER BY time DESC");
 		
 	}
 	

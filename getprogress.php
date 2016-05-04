@@ -26,4 +26,4 @@ $val = $_POST['val'] ;
       echo $success;
  }
 
-$progress = $db->query("select * from users where user_id=$id");
+$progress = $user->selectAll( $id);

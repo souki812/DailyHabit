@@ -18,7 +18,6 @@
     }
     
     .secondbutton {
-        /* margin-left: 20px; */
         float: right;
         display: inline-block;
         margin-top: 30px;
@@ -27,7 +26,7 @@
         color: white
     }
     
-    .secondbutton: hover {
+    .secondbutton hover {
         border: #555555;
         background-color: #555555;
         color: white;
@@ -51,7 +50,7 @@
         background-color: #DC143C;
     }
     
-    .button: hover {
+    .button hover {
         border: #555555;
         background-color: #555555;
         color: white;

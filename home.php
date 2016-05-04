@@ -39,8 +39,8 @@ if (isset($_POST['comment_id'])) {
 
 
     
-$selection = $db->query("select * from users where user_id=$id");
-$comments =  $db->query("select * from newsfeed natural join users where user_id=$id ORDER BY time DESC");
+$selection =  $user->selectAll( $id);
+$comments =  $user->selectNewsfeed($id);
 
 
 // Show whatever this activity is

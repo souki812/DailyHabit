@@ -30,7 +30,6 @@
         border: 1px solid grey;
         background-color: #eeeeee;
         margin-bottom: 20px;
-        margin: left;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
@@ -70,7 +69,7 @@
     
     .circleBase {
         border-radius: 50%;
-        behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
         }
 
     .type1 {
@@ -123,7 +122,7 @@
         color: white;
     }
     
-    .add: hover {
+    .add hover {
         border: #555555;
         background-color: #555555;
         color: white;
@@ -139,7 +138,7 @@
 </style>
  
 
-<br><br><br><br><br><div class="container page" id="firstContainer">
+<div class="container page" id="firstContainer">
     <div class="row">
         <div class="col-md-8 col-md-offset-2  profile">
             

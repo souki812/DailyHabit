@@ -31,7 +31,7 @@
         color: white;
     }
     
-    .firstbutton: hover{
+    .firstbutton hover{
         border: #555555;
         background-color: #555555;
         color: white;
@@ -44,7 +44,7 @@
         float: right;
     }
     
-    .reset: hover {
+    .reset hover {
         border: #555555;
         background-color: #555555;
         color: white;
@@ -58,7 +58,7 @@
         color: white;
     }
     
-    .secondbutton: hover{
+    .secondbutton hover{
         border: #555555;
         background-color: #555555;
         color: white;
@@ -86,7 +86,7 @@
         color: white;
     }
     
-    .add: hover {
+    .add hover {
         border: #555555;
         background-color: #555555;
         color: white;

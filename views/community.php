@@ -44,7 +44,7 @@
             
             
             
-        <br><br><br><?php foreach ($selection as $row): ?>
+        <?php foreach ($selection as $row): ?>
         <form action="friend.php" method="get">
         <div class="container">
             <div class="row">
