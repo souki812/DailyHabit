@@ -48,6 +48,6 @@ $id = $_SESSION['user_id'];
 
 
 // Show whatever this activity is
-require('views/header.php');
+
 require('views/friend.php');
 require('views/footer.php');

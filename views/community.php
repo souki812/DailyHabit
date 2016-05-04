@@ -1,33 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DailyHabit</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="views/css/community.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+              
+            </div>
+
+
+
+
+
+
 <?php require('menu.php'); ?>
-            <style>
-                
-                .community {
-                    margin-top: 150px;
-                    border-top: 20px solid #000;
-                    border-bottom: 20px solid #000;
-                    font-family: Rockwell, serif;
-                }
-                
-                .container{
-                    margin-bottom: 20px;
-                }
-                
-                .proButton {
-                    float: right;
-                    margin-bottom: 10px;
-                    border-style: solid;
-                    border: #000;
-                    background-color: #DC143C;
-                    color: white;
-                }
-                
-                .comment {
-                    border: 1px solid grey;
-                    background-color: #eeeeee;
-                    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-                }
-                
-            </style>
+          
             
     <div class="container page">
         <div class="row">

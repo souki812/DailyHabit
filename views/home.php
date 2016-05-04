@@ -1,99 +1,21 @@
-        
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DailyHabit</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="views/css/home.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+              
+            </div>
+
+    
 <?php require('menu.php'); ?>
 
-<style>
-    
-    .home{
-        border-top: 20px solid #000;
-        border-bottom: 20px solid #000;
-    }
-    
-    .comment{
-        border: 1px solid grey;
-        margin-bottom: 20px;
-        background-color: #eeeeee;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    }
-    
-    .words {
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    }
-    
-    .newsfeed {
-        font-family: Rockwell, serif;
-    }
-    
-    .firstbutton{
-        margin-left: 40px;
-        margin-bottom: 10px;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-    }
-    
-    .firstbutton hover{
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
-    
-    .reset {
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-        float: right;
-    }
-    
-    .reset hover {
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
-    
-    .secondbutton{
-        margin-left: 20px;
-        margin-bottom: 10px;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-    }
-    
-    .secondbutton hover{
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
-    
-    #progress1 {
-        background-color: #DC143C;
-        color: white;
-    }
-    
-    .page{
-         padding-top: 100px; 
-    }
-    
-    .delete {
-        float: right;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-    }
-    
-    .add {
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-    }
-    
-    .add hover {
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
-    
-</style>
-    
  <div class="container page">
    <div class="container">
         <h2>Your Progress:</h2>

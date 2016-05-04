@@ -1,80 +1,22 @@
-        
+   <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DailyHabit</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="views/css/goals.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+              
+            </div>
+
+     
 <?php require('menu.php'); ?>
 
-<style>
-    
-    .home {
-        border: 1px solid grey;
-    }
-    
-      .comment {
-        margin-bottom: 20px;
-        margin-top:150px;    
-    }
-    
-    .firstbutton {
-        margin-left: 40px;
-        margin-bottom: 10px;
-    }
-    
-    .secondbutton {
-        float: right;
-        display: inline-block;
-        margin-top: 30px;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white
-    }
-    
-    .secondbutton hover {
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
-    
-    .page {
-         padding-top: 100px; 
-    }
-    
-    .delete {
-        float: right;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-    }
-    
-    .button {
-        border: #DC143C;
-        background-color: #DC143C;
-    }
-    
-    .button hover {
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
-    
-    .goals {
-        margin-top: 10px;
-    }
-    
-    .words {
-        font-family: Rockwell, serif;
-    }
-    
-    .type1 {
-        border-top: 20px solid #000;
-        border-bottom: 20px solid #000;
-    }
-    
-    .type2 {
-        background-color: #eeeeee;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    }
-    
-</style>
+
     
     
     <div class="container PageContainer" id="secondcontainer">

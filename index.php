@@ -4,7 +4,7 @@ session_start();
 
 // Show the home page only if logged in
 if(isset($_SESSION['user_id'])){
-  require('views/header.php');
+
   require('views/home.php');
   require('views/footer.php');
    

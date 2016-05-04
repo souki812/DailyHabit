@@ -60,6 +60,6 @@ $future =  $user->selectFuture( $id);
 $achieved =  $user->selectAchieved( $id);
 
 // Show whatever this activity is
-require('views/header.php');
+
 require('views/goals.php');
 require('views/footer.php');

@@ -27,7 +27,7 @@
                 color: white;
             }
     
-            .login: hover {
+            .login hover {
                 border: #555555;
                 background-color: #555555;
                 color: white;
@@ -93,7 +93,6 @@
 
             .circleBase {
                 border-radius: 50%;
-                behavior: url(PIE.htc); /* remove if you don't care about IE8 */
             }
 
             .type1 {
