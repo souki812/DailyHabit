@@ -81,6 +81,8 @@
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
            </form>
+            <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="circleBase type1"   id="profile-pic"   onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+             
         </div>
     <?php endforeach; ?>
 </div>
@@ -92,13 +94,21 @@
         <div class="modal-content">
             <div class="modal-body">
                 <form action="home.php" method="post" class="well">
-                 <form class="form">
+                 
                     <label >Comment</label>
                     <textarea class="form-control" rows="5" id="comment1"  name="newsfeed" autocomplete="off" autofocus></textarea>
                     <input type="hidden" name="task" value="newsfeed">
                      <button type="submit" class="btn btn-default add">Add</button>
+                
                 </form>
-                </form>
+                
+                <form action="home.php" method="post" enctype="multipart/form-data">
+                <div class="upload1">
+                    <label for="file">Filename:</label>
+                    <input type="file" name="file" id="file"><br>
+                </div>
+                <div class="upload2"><input type="submit" class="upload" name="profile" value="Upload"></div>
+            </form>
             </div>
             
         </div>
