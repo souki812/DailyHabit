@@ -1,4 +1,16 @@
 
+
+<!--To Do List
+- fix community layout (2 columns)
+- fix timestamp format
+- fix queries
+- fix post picture in comments
+
+-->
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,9 +71,9 @@
         
   <!--Track your habits-->
   <div class="container PageContainer" id="firstContainer">
-        <div class="col-md-9 margintop1">
+        <div class="col-md-9 margintop2">
             <h1>Track your habits</h1>
-            <p class="lead">Achieve all your goals with DailyHait</p>  <!--Bootstrap to make paragraph more distinct-->
+            <p class="lead">Achieve all your goals with DailyHabit</p>  <!--Bootstrap to make paragraph more distinct-->
             <p> Sign-up for free today!</p>
             <p> Keep track of your progress in an easy and fast way</p>
             <p> Quickly add and log your daily progress</p>

@@ -17,7 +17,7 @@
     .profile{
         border-top: 30px solid #000;
         border-bottom: 30px solid #000;
-        /*border: 1px solid grey;*/
+        margin-top: 200px;
     }
     
     .comment{

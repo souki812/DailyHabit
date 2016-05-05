@@ -44,14 +44,16 @@
                 <div class="col-md-8 col-md-offset-4">
                     <div class="col-md-6 comment" id="leftcol">
                     <div class="media">
+                        <center>
                         <div class="form-group">
-                            <br><img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  id="profile-pic" class="img-circle" width="90" height="90"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                            <br><img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  id="profile-pic" class="img-circle" width="110" height="110"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                             <div class="media-body"><br>
                             <label>
                                 <h4><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?> <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
                             </label>
                             </div>
                         </div>
+                        </center>
                         
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                          <input type="submit" name="friend" class="proButton" value="View Profile">
