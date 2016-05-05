@@ -59,7 +59,7 @@
         
   <!--Track your habits-->
   <div class="container PageContainer" id="firstContainer">
-        <div class="col-md-6 margintop1">
+        <div class="col-md-9 margintop1">
             <h1>Track your habits</h1>
             <p class="lead">Achieve all your goals with DailyHait</p>  <!--Bootstrap to make paragraph more distinct-->
             <p> Sign-up for free today!</p>
@@ -67,7 +67,7 @@
             <p> Quickly add and log your daily progress</p>
         </div>
         
-        <div class="col-md-6 margintop1">
+        <div class="col-xs-3 margintop1">
             <h3>Sign Up Today!</h3>
                     <form action="authenticate.php" method="post" class="well" id="signup1">
             
