@@ -36,7 +36,7 @@
             </center>
             
             
-            <form action="activity.php" method="post" enctype="multipart/form-data">
+            <br><form action="activity.php" method="post" enctype="multipart/form-data">
                 <div class="upload1">
                     <label for="file">Filename:</label>
                     <input type="file" name="file" id="file"><br>

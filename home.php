@@ -36,7 +36,12 @@ if (isset($_POST['comment_id'])) {
     //Remove comment
     $success= $user->remove_comment( $_POST['comment_id']);
 }
+<<<<<<< HEAD
  
+=======
+
+
+>>>>>>> parent of 19d1be7... working on upload image in the comments
     
 $selection =  $user->selectAll( $id);
 $comments =  $user->selectNewsfeed($id);

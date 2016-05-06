@@ -81,7 +81,10 @@
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
            </form>
+<<<<<<< HEAD
             
+=======
+>>>>>>> parent of 19d1be7... working on upload image in the comments
         </div>
     <?php endforeach; ?>
 </div>
@@ -93,15 +96,18 @@
         <div class="modal-content">
             <div class="modal-body">
                 <form action="home.php" method="post" class="well">
-                 
+                 <form class="form">
                     <label >Comment</label>
                     <textarea class="form-control" rows="5" id="comment1"  name="newsfeed" autocomplete="off" autofocus></textarea>
                     <input type="hidden" name="task" value="newsfeed">
                      <button type="submit" class="btn btn-default add">Add</button>
-                
                 </form>
+<<<<<<< HEAD
                 
                
+=======
+                </form>
+>>>>>>> parent of 19d1be7... working on upload image in the comments
             </div>
             
         </div>
