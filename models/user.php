@@ -199,9 +199,5 @@ class User {
 		return $insert->execute();
 	}
 	
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> parent of 19d1be7... working on upload image in the comments
 }

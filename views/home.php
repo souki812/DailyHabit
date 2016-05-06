@@ -81,10 +81,7 @@
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
            </form>
-<<<<<<< HEAD
-            
-=======
->>>>>>> parent of 19d1be7... working on upload image in the comments
+
         </div>
     <?php endforeach; ?>
 </div>
@@ -102,12 +99,9 @@
                     <input type="hidden" name="task" value="newsfeed">
                      <button type="submit" class="btn btn-default add">Add</button>
                 </form>
-<<<<<<< HEAD
-                
-               
-=======
+
                 </form>
->>>>>>> parent of 19d1be7... working on upload image in the comments
+
             </div>
             
         </div>
