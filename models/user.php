@@ -199,9 +199,5 @@ class User {
 		return $insert->execute();
 	}
 	
-	function commentpicture($file, $id){
-		$insert = $this->db->prepare("UPDATE newsfeed SET picture=:picture WHERE user_id=$id");
-        $insert->bindParam(':picture', $file, PDO::PARAM_STR);
-		return $insert->execute();
-	}
+	
 }
