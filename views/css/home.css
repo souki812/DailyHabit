@@ -10,6 +10,10 @@
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     
+    .img-circle {
+        border: 2px solid grey;
+    }
+    
     .words {
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
@@ -70,6 +74,7 @@
     
     .delete {
         float: right;
+        margin-bottom: 10px;
         border: #DC143C;
         background-color: #DC143C;
         color: white;

@@ -126,7 +126,7 @@
                     </label>
                 </div>
                 
-            <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
+            <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5><br>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
             </form>
