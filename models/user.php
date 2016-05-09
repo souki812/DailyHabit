@@ -34,9 +34,10 @@ class User {
 	}
 	
 	function newsfeed($comment, $id){
-		$insert = $this->db->prepare("insert into newsfeed(comment,user_id) values(:comment,:user_id)");
+		$insert = $this->db->prepare("insert into newsfeed(comment,user_id,friend_id) values(:comment,:user_id,:friend_id)");
         $insert->bindParam(':comment', $comment, PDO::PARAM_STR);
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		$insert->bindParam(':friend_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
 	
@@ -159,11 +160,7 @@ class User {
 	
 	 // Attempt to return the ID of this user
     function selectComments($id) {
-       return $this->db->query("select * from newsfeed natural join users where user_id= '$id' ORDER BY time ASC");
-		//"SELECT (CASE WHEN friend_id is null 
-        //    THEN select * from users where user_id=$id
-        //    ELSE select * from users where user_id=$id AND friend_id=$friend End)
-//FROM newsfeed natural join users
+       return $this->db->query("select * from users join newsfeed on users.user_id= newsfeed.friend_id where newsfeed.user_id= '$id' ORDER BY time ASC");
 
 	}
 	
