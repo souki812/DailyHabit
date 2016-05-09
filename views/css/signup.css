@@ -21,18 +21,6 @@
                 text-align: center;
             }
             
-            .login {
-                border: #ffb3b3;
-                background-color: #ffb3b3;
-                color: white;
-            }
-    
-            .login hover {
-                border: #555555;
-                background-color: #555555;
-                color: white;
-            }
-            
             .large{
                 font-size:3em;
                 font-weight: bold;
@@ -59,14 +47,12 @@
 
             .margintop1{
                 margin-top:150px;
-<<<<<<< HEAD
             }
             
             .margintop2{
                 margin-top:150px;
                 color: white;
-=======
->>>>>>> parent of 19d1be7... working on upload image in the comments
+
             }
             
             .hexagon {

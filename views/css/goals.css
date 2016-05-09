@@ -15,16 +15,15 @@
     }
     
     .secondbutton {
-        /* margin-left: 20px; */
         float: right;
         display: inline-block;
         margin-top: 30px;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white
     }
     
-    .secondbutton hover {
+    .secondbutton:hover {
         border: #555555;
         background-color: #555555;
         color: white;
@@ -39,18 +38,18 @@
         margin-right: 10px;
         margin-bottom: 10px;
         margin-top: -10px;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
     .button {
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
-    .button hover {
+    .button:hover {
         border: #555555;
         background-color: #555555;
         color: white;

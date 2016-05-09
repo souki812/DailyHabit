@@ -1,3 +1,4 @@
+    
     /* Adds borders for tabs */
     .tab-content {
         border-left: 1px solid #ddd;
@@ -34,8 +35,8 @@
      .firstbutton{
         margin-left: 280px;
         margin-bottom: 20px;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
     }
     
     .secondbutton{
@@ -43,8 +44,8 @@
         margin-bottom: 20px;
         display: inline-block;
         float: right;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
@@ -94,12 +95,12 @@
     }
     
     .add {
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
-    .add hover {
+    .add:hover {
         border: #555555;
         background-color: #555555;
         color: white;

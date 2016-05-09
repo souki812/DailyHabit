@@ -25,12 +25,12 @@
     .firstbutton{
         margin-left: 40px;
         margin-bottom: 10px;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
-    .firstbutton hover{
+    .firstbutton:hover {
         border: #555555;
         background-color: #555555;
         color: white;
@@ -38,33 +38,33 @@
     
     .reset {
         border: #DC143C;
-        background-color: #DC143C;
+        background-color: #4682B4;
         color: white;
         float: right;
     }
     
-    .reset hover {
+    .reset:hover {
         border: #555555;
         background-color: #555555;
         color: white;
     }
     
-    .secondbutton{
+    .secondbutton {
         margin-left: 20px;
         margin-bottom: 10px;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
-    .secondbutton hover{
+    .secondbutton:hover {
         border: #555555;
         background-color: #555555;
         color: white;
     }
     
     #progress1 {
-        background-color: #DC143C;
+        background-color: #4682B4;
         color: white;
     }
     
@@ -75,18 +75,18 @@
     .delete {
         float: right;
         margin-bottom: 10px;
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
     .add {
-        border: #DC143C;
-        background-color: #DC143C;
+        border: #4682B4;
+        background-color: #4682B4;
         color: white;
     }
     
-    .add hover {
+    .add:hover {
         border: #555555;
         background-color: #555555;
         color: white;

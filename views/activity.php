@@ -49,7 +49,8 @@
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
                 <button  class="btn btn-default secondbutton"  data-toggle="modal" data-target="#modal1" >Add Biography</button>
         </div>
- </div>
+    </div>
+</div>
     
 
 
@@ -112,9 +113,8 @@
 
 </div>
 
-<div class="container page">
-    
- <div class="row">
+<div class="container page">   
+  <div class="row">
    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="activity.php" method="post" >
@@ -131,14 +131,12 @@
             <input type="submit" name="delete" class="delete" value="delete">
             </form>
         </div>
-            <?php endforeach; ?>
-            
- </div>
+            <?php endforeach; ?>       
+  </div>
 </div>
- 
 
 
-</div>
+
   
   
 
