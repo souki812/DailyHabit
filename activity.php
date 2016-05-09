@@ -63,7 +63,7 @@ $id = $_SESSION['user_id'];
   
   
 $selection = $user->selectAll( $id);
-$comments =  $user->selectNewsfeed($id);
+$comments =  $user->selectComments($id);
 $uploadimage = $user->selectAll($id);
 }
 

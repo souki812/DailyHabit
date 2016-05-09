@@ -39,7 +39,7 @@ if (isset($_POST['comment_id'])) {
 
     
 $selection =  $user->selectAll( $id);
-$comments =  $user->selectNewsfeed($id);
+$comments =  $user->selectComments($id);
 
 
 // Show whatever this activity is
