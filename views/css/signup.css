@@ -1,6 +1,6 @@
             
             
-            .navbar-brand{
+            .navbar-brand {
                 font-size:2em;  
             }
             
@@ -9,57 +9,59 @@
                 color: red;
             }
             
-            #firstContainer{
+            #firstContainer {
                  background: url("/views/images/animated.gif");
                  width: 100%;
                  background-size: cover;
                  height: 200px;
             }    
           
-            #firstRow{
+            #firstRow {
                 margin-top:100px;
                 text-align: center;
             }
             
-            .large{
+            .large {
                 font-size:3em;
                 font-weight: bold;
             }
             
-            .centertext{
+            .centertext {
                 text-align: center;
             }
             
-            #thirdcontainer{
-                background-color: #ffb3b3;
+            .signup {
+                color: white;
+            }
+            
+            #thirdcontainer {
+                background-color: #4682B4;
                 width: 100%;
             }
             
-            #secondcontainer{
+            #secondcontainer {
                 background-color: white;
                 width: 100%;
             }
             
-            .margintop{
+            .margintop {
                 margin-top:100px;
-                
             }
 
-            .margintop1{
+            .margintop1 {
                 margin-top:150px;
             }
             
-            .margintop2{
+            .margintop2 {
                 margin-top:150px;
                 color: white;
-
             }
             
             .hexagon {
                 position: relative;
                 width: 300px; 
                 height: 173.21px;
-                background-color: #ffe6f9;
+                background-color: #B0E2FF;
                 margin: 86.60px 0;
             }
 
@@ -73,16 +75,16 @@
             }
 
             /* Top triangle */
-            .hexagon:before type1{
+            .hexagon:before type1 {
                 bottom: 100%;
-                border-bottom: 86.60px solid #ffe6f9;
+                border-bottom: 86.60px solid #B0E2FF;
             }
 
             /* Bottom triangle*/
             .hexagon:after {
                 top: 100%;
                 width: 0;
-                border-top: 86.60px solid #ffe6f9;
+                border-top: 86.60px solid #B0E2FF;
             }
 
             .circleBase {

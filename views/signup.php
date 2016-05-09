@@ -1,16 +1,4 @@
 
-
-<!--To Do List
-- fix community layout (2 columns)
-- fix timestamp format
-- fix queries
-- fix post picture in comments
-
--->
-
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +11,8 @@
     </head>
     
     
-    <body data-spy="scroll" data-target="#navigation"> <!-- SCROLL SPY bootstrap -->
+    <!-- SCROLL SPY bootstrap -->
+    <body data-spy="scroll" data-target="#navigation">
         
         <div class="navbar navbar-default navbar-fixed-top">
             
@@ -80,7 +69,7 @@
         </div>
         
         <div class="col-xs-3 margintop1">
-            <h3>Sign Up Today!</h3>
+            <h3 class="signup">Sign Up Today!</h3>
                     <form action="authenticate.php" method="post" class="well" id="signup1">
             
                         <div class="form-group" id="first">
