@@ -107,15 +107,15 @@
   <h2>Your Progress:</h2>
   <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
   
-   <div class="progress">
-  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%" id="progress1">Progress</div>
-</div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%" id="progress1">Progress</div>
+    </div>
 
 </div>
 
 <div class="container page">   
   <div class="row">
-   <?php foreach ($comments as $row): ?>
+    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="activity.php" method="post" >
                 <div class="form-group">
@@ -131,7 +131,7 @@
             <input type="submit" name="delete" class="delete" value="delete">
             </form>
         </div>
-            <?php endforeach; ?>       
+    <?php endforeach; ?>       
   </div>
 </div>
 

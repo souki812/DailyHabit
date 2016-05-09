@@ -29,18 +29,17 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])
                 $_SESSION['message'] = 'Sorry, there is an account with the same email.';
             }
         }
-          elseif ($_POST['task'] == 'login') {
-              $user_id = $user->login($_POST['email'], $_POST['password']);
+        // Login
+        elseif ($_POST['task'] == 'login') {
+            $user_id = $user->login($_POST['email'], $_POST['password']);
             
-              if (isset($user_id)) {
-                  session_regenerate_id(true); // New session for login
-                  $_SESSION['user_id'] = $user_id;
-                  $_SESSION['admin'] = $user->getadmin($user_id);
-              } else {
-                  $_SESSION['message'] = 'Wrong username or password.';
-              }
-         
-       
+            if (isset($user_id)) {
+                session_regenerate_id(true); // New session for login
+                $_SESSION['user_id'] = $user_id;
+                $_SESSION['admin'] = $user->getadmin($user_id);
+            } else {
+                $_SESSION['message'] = 'Wrong username or password.';
+            }
         }
     }
 }

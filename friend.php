@@ -16,15 +16,15 @@ if (!isset($_SESSION['user_id'])) {
 $id = $_SESSION['user_id'];
 
  if (!isset($db)) {
-        $_SESSION['message'] = "Could not connect to the database.";
+    $_SESSION['message'] = "Could not connect to the database.";
  } else {
         
         // Create user model
         require_once('models/user.php');
         $user = new User($db);
         
-         // Get the profile data
-         if (isset($_GET['user_id'])) {
+        // Get the profile data
+        if (isset($_GET['user_id'])) {
           
             $friend_id = (int) $_GET['user_id'];
             $_SESSION['friend'] = $friend_id;
@@ -48,6 +48,6 @@ $id = $_SESSION['user_id'];
 
 
 // Show whatever this activity is
-
 require('views/friend.php');
 require('views/footer.php');
+

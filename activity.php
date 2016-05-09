@@ -68,9 +68,8 @@ $uploadimage = $user->selectAll($id);
 }
 
 
-
-
 // Show whatever this activity is
 
 require('views/activity.php');
 require('views/footer.php');
+

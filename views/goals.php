@@ -17,8 +17,7 @@
 <?php require('menu.php'); ?>
 
 
-    
-    
+
     <div class="container PageContainer" id="secondcontainer">
         <div class="row margintop" class="centertext">
             
@@ -31,15 +30,16 @@
             </div>
             
             <div class="type2">
+                 <?php foreach ($current as $row): ?>
                 <form action="goals.php" method="post">
-                    <?php foreach ($current as $row): ?>
                     <h4 class="text"> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
                     <input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br>          
-                    <?php endforeach; ?>
-                </form>
+                 </form>
+                 <?php endforeach; ?>
             </div><br>
-                
+             
+            <!--Current Goal Modal-->    
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
                 <div class="modal-content">
@@ -67,16 +67,16 @@
                 </div>
                 
                 <div class="type2">
+                    <?php foreach ($achieved as $row): ?>
                     <form action="goals.php" method="post">
-                        <?php foreach ($achieved as $row): ?>
                         <h4 class="text"> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
                         <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
                         <input type="submit" name="delete" class="delete" value="delete"><br>
-                        <?php endforeach; ?>
                     </form>
+                     <?php endforeach; ?>
                 </div>
                     
-                    
+            <!--Achieved Goals Modal-->         
             <div class="modal" id="modal1">
                 <div class="modal-dialog">
                 <div class="modal-content">
@@ -104,16 +104,16 @@
             </div>
                 
             <div class="type2">
+                <?php foreach ($future as $row): ?>
                 <form action="goals.php" method="post" >
-                    <?php foreach ($future as $row): ?>
                     <h4 class="text"> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
                     <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br>
-                    <?php endforeach; ?>
                 </form>
+                <?php endforeach; ?>
             </div>
                 
-                
+            <!--Future Goals Modal-->      
             <div class="modal" id="modal2">
                 <div class="modal-dialog">
                 <div class="modal-content">

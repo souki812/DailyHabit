@@ -42,11 +42,9 @@ $id = $_SESSION['user_id'];
         }                             
     }
  }
- 
-
 
 
 // Show whatever this activity is
-
 require('views/community.php');
 require('views/footer.php');
+
