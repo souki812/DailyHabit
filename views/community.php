@@ -36,8 +36,8 @@
             
             
             
-        <?php foreach ($selection as $row): ?>
-        <form action="friend.php" method="get">
+    <?php foreach ($selection as $row): ?>
+      <form action="friend.php" method="get">
         <div class="container">
             <div class="row">
               
@@ -57,21 +57,18 @@
                         
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                          <input type="submit" name="friend" class="proButton" value="View Profile">
-                         </form>
-        <?php if (isset($_SESSION['administrator'])): ?>
-                          <form action="community.php" method="post">
-                             <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                             <input type="submit" name="delete" class="delete" value="Delete Account">
-                            
-                          </form>
-                      <?php endif; ?>
-
-                         
+       </form>
+        
+                         <?php if (isset($_SESSION['administrator'])): ?>
+                            <form action="community.php" method="post">
+                                <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                                <input type="submit" name="delete" class="delete" value="Delete Account">
+                            </form>
+                        <?php endif; ?>
                     </div>  
                     </div>
                 </div>
             </div>
-        </div>
-    
+        </div> 
     <?php endforeach; ?>
     </div>
