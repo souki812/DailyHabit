@@ -33,12 +33,12 @@
             <div class="type2">
                 <form action="goals.php" method="post">
                     <?php foreach ($current as $row): ?>
-                    <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4 class="text"> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
                     <input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br>          
                     <?php endforeach; ?>
                 </form>
-            </div>
+            </div><br>
                 
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
@@ -69,7 +69,7 @@
                 <div class="type2">
                     <form action="goals.php" method="post">
                         <?php foreach ($achieved as $row): ?>
-                        <h4> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
+                        <h4 class="text"> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
                         <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
                         <input type="submit" name="delete" class="delete" value="delete"><br>
                         <?php endforeach; ?>
@@ -106,7 +106,7 @@
             <div class="type2">
                 <form action="goals.php" method="post" >
                     <?php foreach ($future as $row): ?>
-                    <h4> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4 class="text"> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
                     <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br>
                     <?php endforeach; ?>
