@@ -45,6 +45,7 @@
                   // If the reset button is pressed
                   $("#reset").click(function() {
                         $('.progress-bar').css('width', '0%').attr('aria-valuenow', 0);
-                        $("#progress1").html('0%');       
+                        $("#progress1").html('0%');
+                        val=0;
                   });
       });
