@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $id = $_SESSION['user_id'];
 
-
+// Try to connect to the database
 if (!isset($db)) {
     $_SESSION['message'] = "Could not connect to the database.";
 }else{
@@ -33,6 +33,7 @@ if (isset($_POST['task'])) {
 }
       
 if (isset($_POST['comment_id'])) {
+    
     //Remove comment
     $success= $user->remove_comment( $_POST['comment_id']);
 }
@@ -43,6 +44,6 @@ $comments =  $user->selectComments($id);
 
 
 // Show whatever this activity is
-
 require('views/home.php');
 require('views/footer.php');
+

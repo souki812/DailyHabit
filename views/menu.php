@@ -1,5 +1,5 @@
 
-
+<!--Navigation Bar at the top of each page-->
 <div class="navbar navbar-default navbar-fixed-top">
             
             <div class="container">

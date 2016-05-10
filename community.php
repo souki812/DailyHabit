@@ -18,7 +18,7 @@ $id = $_SESSION['user_id'];
 
 
 
-
+// Try to connect to the database
  if (!isset($db)) {
     $_SESSION['message'] = "Could not connect to the database.";
  }else{
@@ -27,11 +27,13 @@ $id = $_SESSION['user_id'];
     $user = new User($db);
     $admin = $user->getadmin($id);
     
+    // 0 = regular user
     if ($admin == 0 ){
         $selection = $user->communityselect();
         $fullName =  $user->selectAll( $id);
     }
     
+    // 1 = admin
     if($admin == 1 ){
         $_SESSION['administrator'] = 1;
         $selection = $user->communityselect();

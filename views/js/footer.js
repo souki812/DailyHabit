@@ -1,4 +1,5 @@
- $(document).ready(function() {
+
+$(document).ready(function() {
       var val = 0;
       
             $.ajax({
@@ -48,4 +49,4 @@
                         $("#progress1").html('0%');
                         val=0;
                   });
-      });
+});

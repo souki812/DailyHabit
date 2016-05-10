@@ -102,7 +102,7 @@
 </div> 
 </div>
 
-
+<!--Progress Bar-->
 <br><div class="container">
   <h2>Your Progress:</h2>
   <p><cite>Progress is impossible without change, and those who cannot change their minds cannot change anything.</cite> George Bernard Shaw </p> 
@@ -113,6 +113,7 @@
 
 </div>
 
+<!--Profile of the user-->
 <div class="container page">   
   <div class="row">
     <?php foreach ($comments as $row): ?>
@@ -125,7 +126,8 @@
                     <h4 class="text"><?php echo htmlentities($row['time'], ENT_QUOTES, 'utf-8'); ?></h4>
                     </label>
                 </div>
-                
+            
+            <!--Comment section of profile-->    
             <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5><br>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">

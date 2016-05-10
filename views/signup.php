@@ -11,6 +11,8 @@
     </head>
     
     
+    
+    
     <!-- SCROLL SPY bootstrap -->
     <body data-spy="scroll" data-target="#navigation">
         
@@ -68,6 +70,7 @@
             <p> Quickly add and log your daily progress</p>
         </div>
         
+        <!--Registration form to sign up for DailyHabit-->
         <div class="col-xs-3 margintop1">
             <h3 class="signup">Sign Up Today!</h3>
                     <form action="authenticate.php" method="post" class="well" id="signup1">
@@ -173,6 +176,7 @@
         </div>
     </div>
   </div>
+        
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

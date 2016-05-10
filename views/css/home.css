@@ -1,9 +1,10 @@
-    .home{
+    
+    .home {
         border-top: 20px solid #000;
         border-bottom: 20px solid #000;
     }
     
-    .comment{
+    .comment {
         border: 1px solid grey;
         margin-bottom: 20px;
         background-color: #eeeeee;
@@ -91,3 +92,5 @@
         background-color: #555555;
         color: white;
     }
+    
+    

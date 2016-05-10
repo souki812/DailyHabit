@@ -14,6 +14,8 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $id = $_SESSION['user_id'];
+
+// Try to connect to the database
  if (!isset($db)) {
         $_SESSION['message'] = "Could not connect to the database.";
     } else {
@@ -24,12 +26,12 @@ $id = $_SESSION['user_id'];
         
         
          if (isset($_POST['task'])) {
-            //Add a biography
+            // Add a biography
             if ($_POST['task'] == 'biography') {
                 $success = $user->bio($id,  $_POST['biography']);
             }
         
-            //Add a comment
+            // Add a comment
             if ($_POST['task'] == 'newsfeed') {
                 $success = $user->newsfeed( $_POST['newsfeed'], $id);
             }
@@ -40,6 +42,7 @@ $id = $_SESSION['user_id'];
             $success= $user->remove_comment( $_POST['comment_id']);
         }
         
+        // Upload image
         if(isset($_POST['profile']))
             $allow = array("jpg", "jpeg", "gif", "png");
             $todir = 'views/uploads/';

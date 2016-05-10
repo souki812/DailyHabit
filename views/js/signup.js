@@ -1,7 +1,8 @@
+  
   $(document).ready(function() {
         
-        
-         $(".PageContainer").css("min-height", $(window).height()); //set picture to windows height
+        //set picture to windows height
+         $(".PageContainer").css("min-height", $(window).height());
          
          
         // Don't submit the form if there are input errors
@@ -28,7 +29,8 @@
           // Clear any previous error reports
           $('.form-group').removeClass('has-error');
           $('.help-block').remove();
-           // Report an empty password
+          
+          // Report an empty first name
           if (!first) {
             $('#first').append('<span class="help-block">First name required</span>');
             $('#first').addClass('has-error');
@@ -43,7 +45,7 @@
             $('#last input').focus();
             return false;
           }
-          // Report an email that can't be a SLU student email
+          // Report an input that isn't an email
           if (!email) {
             $('#email').append('<span class="help-block">Email required</span>');
             $('#email').addClass('has-error');
@@ -58,8 +60,6 @@
             $('#password input').focus();
             return false;
           }
-          
-         
           
           // Report empty gender
           if (!gender) {

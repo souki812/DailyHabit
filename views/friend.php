@@ -22,17 +22,13 @@
 
 
  
-
+<!--Profile information-->
 <div class="container page" id="firstContainer">
  <div class="row">
-        
         <div class="col-md-8 col-md-offset-2  profile" >
-
-   
             <?php foreach ($selection as $row): ?>
                 <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="circleBase type1" id="profile-pic"   onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
              <?php endforeach; ?>
-  
 
             <center>
             <?php foreach ($success as $row): ?>
@@ -48,9 +44,9 @@
 </div>
 
 
+<!--Comments section-->
 <div class="container page">
   <div class="row">
-  
    <?php foreach ($comments as $row): ?>
         <div class="col-md-8 col-md-offset-2  comment">
             <div class="form-group">
@@ -70,7 +66,7 @@
 
 
  
-
+<!--Modal to add a comment to newfeed-->
 <div class="modal" id="modal5">
     <div class="modal-dialog">
         <div class="modal-content"> 

@@ -13,9 +13,13 @@
               
             </div>
 
+
+
     
 <?php require('menu.php'); ?>
 
+
+<!--Progress Bar-->
  <div class="container page">
    <div class="container">
         <h2>Your Progress:</h2>
@@ -48,7 +52,7 @@
     </div>
    
    
-   
+    <!--Newsfeed section of home page-->
     <div class="container page">
         <div class="row">
             <center>
@@ -64,7 +68,7 @@
  
  
  
-
+<!--Comments with corresponding user-->
 <br><div class="row">
    <?php foreach ($comments as $row): ?>
         <div class="col-md-6 col-md-offset-3  comment" >
@@ -87,7 +91,7 @@
 </div>
 
  
- 
+ <!--Modal to add a new comment-->
 <div class="modal" id="modal3">
     <div class="modal-dialog">
         <div class="modal-content">

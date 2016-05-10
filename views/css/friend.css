@@ -11,17 +11,17 @@
         margin-bottom: 0;
     }
 
-    .page{
+    .page {
          padding-top: 100px; 
     }
     
-    .profile{
+    .profile {
         border-top: 30px solid #000;
         border-bottom: 30px solid #000;
         margin-top: 100px;
     }
     
-    .comment{
+    .comment {
         border: 1px solid grey;
         margin-bottom: 20px;
         background-color: #eeeeee;
@@ -32,14 +32,14 @@
         border: 2px solid grey;
     }
     
-     .firstbutton{
+     .firstbutton {
         margin-left: 280px;
         margin-bottom: 20px;
         border: #4682B4;
         background-color: #4682B4;
     }
     
-    .secondbutton{
+    .secondbutton {
         margin-right: 20px;
         margin-bottom: 20px;
         display: inline-block;
@@ -55,7 +55,7 @@
         color: white;
     }
     
-    #profile-pic{
+    #profile-pic {
          width:150px; /* you can use % */
          height: 150px;
          border: 2px solid grey;
@@ -67,8 +67,7 @@
     
     .circleBase {
         border-radius: 50%;
-      
-        }
+    }
 
     .type1 {
         /*background: url("views/images/manon.jpg");*/

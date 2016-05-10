@@ -20,7 +20,7 @@
 
 <?php require('menu.php'); ?>
           
-            
+    <!--Community heading-->        
     <div class="container page">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -35,7 +35,7 @@
             
             
             
-            
+    <!--Get user profile information-->        
     <?php foreach ($selection as $row): ?>
       <form action="friend.php" method="get">
         <div class="container">
@@ -58,7 +58,8 @@
                          <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                          <input type="submit" name="friend" class="proButton" value="View Profile">
        </form>
-        
+                        
+                         <!--Check if the user is the admin-->
                          <?php if (isset($_SESSION['administrator'])): ?>
                             <form action="community.php" method="post">
                                 <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
